@@ -1,15 +1,8 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-
-<<<<<<< HEAD
-<% if @issue.photo? %>
-  <%= cl_image_tag @issue.photo.path, width: 200, height: 300, crop: :fill %>
-=======
-
 <% if current_user %>
   <%= link_to "Upload this pic mr secretary!!!", new_user_issue_path(current_user) %>
 <% else %>
   <%= link_to "Sign in Please", new_user_session_path %>
->>>>>>> 7c4223fe713c8a29deaa25dc0da9e605ff773320
 <% end %>
