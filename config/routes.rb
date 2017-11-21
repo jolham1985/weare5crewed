@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :tenants
-  devise_for :landlords
+  devise_for :users
 
-  resources :tenants, only: [:show] do
-    resources :issues
-  end
-
-  resources :landlords, only: [:show] do
+  resources :users, only: [:show] do
     resources :issues
   end
 
