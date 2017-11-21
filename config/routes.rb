@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show] do
     resources :issues
+    resources :apartments
   end
 
   root to: 'pages#home'
