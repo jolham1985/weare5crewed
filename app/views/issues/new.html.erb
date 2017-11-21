@@ -1,0 +1,7 @@
+<h1>Issues#new</h1>
+<p>I'm in the Issues Controller</p>
+
+
+<% if @issue.photo? %>
+  <%= cl_image_tag @issue.photo.path, width: 200, height: 300, crop: :fill %>
+<% end %>

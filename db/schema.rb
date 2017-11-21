@@ -10,10 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120145308) do
+ActiveRecord::Schema.define(version: 20171121172202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "apartments", force: :cascade do |t|
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "landlord_id"
+    t.integer "tenant_id"
+  end
+
+  create_table "attachinary_files", force: :cascade do |t|
+    t.string "attachinariable_type"
+    t.bigint "attachinariable_id"
+    t.string "scope"
+    t.string "public_id"
+    t.string "version"
+    t.integer "width"
+    t.integer "height"
+    t.string "format"
+    t.string "resource_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "issues", force: :cascade do |t|
+    t.bigint "apartments_id"
+    t.string "name"
+    t.bigint "categories_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["apartments_id"], name: "index_issues_on_apartments_id"
+    t.index ["categories_id"], name: "index_issues_on_categories_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,8 +67,17 @@ ActiveRecord::Schema.define(version: 20171120145308) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "uid"
+    t.string "facebook_picture_url"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "token"
+    t.datetime "token_expiry"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "issues", "apartments", column: "apartments_id"
+  add_foreign_key "issues", "categories", column: "categories_id"
 end
