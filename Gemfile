@@ -18,6 +18,14 @@ gem 'simple_form'
 gem 'uglifier'
 
 group :development, :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'launchy'
+  gem 'minitest-reporters'
+  # [...]
+end
+
+group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'web-console', '>= 3.3.0'

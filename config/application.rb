@@ -1,4 +1,5 @@
 require_relative 'boot'
+require "rails/test_unit/railtie"
 
 require "rails"
 # Pick the frameworks you want:
