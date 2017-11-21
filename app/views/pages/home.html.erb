@@ -1,2 +1,7 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+
+<% if @issue.photo? %>
+  <%= cl_image_tag @issue.photo.path, width: 200, height: 300, crop: :fill %>
+<% end %>
