@@ -1,4 +1,7 @@
 class IssuesController < ApplicationController
+<<<<<<< HEAD
+  params.require(:product).permit(:name, :description, :photo)
+=======
 
   def index
     @issues = Issues.all
@@ -25,4 +28,5 @@ class IssuesController < ApplicationController
 
   def destroy
   end
+>>>>>>> 7c4223fe713c8a29deaa25dc0da9e605ff773320
 end
