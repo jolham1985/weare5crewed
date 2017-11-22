@@ -5,3 +5,10 @@
 <% if @issue.photo? %>
   <%= cl_image_tag @issue.photo.path, width: 200, height: 300, crop: :fill %>
 <% end %>
+
+<%= link_to "Let's say we filled the whole thing", user_issues_path(params[:user_id]), method: :post %>
+
+<%= simple_form_for([current_user, @issue]) do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit %>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171121172202) do
+ActiveRecord::Schema.define(version: 20171122130201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,13 +45,13 @@ ActiveRecord::Schema.define(version: 20171121172202) do
   end
 
   create_table "issues", force: :cascade do |t|
-    t.bigint "apartments_id"
+    t.bigint "apartment_id"
     t.string "name"
-    t.bigint "categories_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["apartments_id"], name: "index_issues_on_apartments_id"
-    t.index ["categories_id"], name: "index_issues_on_categories_id"
+    t.index ["apartment_id"], name: "index_issues_on_apartment_id"
+    t.index ["category_id"], name: "index_issues_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,10 +74,11 @@ ActiveRecord::Schema.define(version: 20171121172202) do
     t.string "last_name"
     t.string "token"
     t.datetime "token_expiry"
+    t.string "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "issues", "apartments", column: "apartments_id"
-  add_foreign_key "issues", "categories", column: "categories_id"
+  add_foreign_key "issues", "apartments"
+  add_foreign_key "issues", "categories"
 end
