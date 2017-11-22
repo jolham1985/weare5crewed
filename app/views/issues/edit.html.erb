@@ -1,0 +1,8 @@
+<h1>Issues#edit</h1>
+<%= @issue.name %>
+
+
+<%= simple_form_for([current_user, @issue]) do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit %>
+<% end %>

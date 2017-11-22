@@ -1,0 +1,17 @@
+
+<h1>Edit Apartment</h1>
+
+
+<%= form_for :apartment,:url => user_apartment_path(:apartment), method: :patch do |form| %>
+
+<p>
+    <%= form.label :address %><br>
+    <%= form.text_area :address %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', user_apartment_path(:apartment) %>

@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :rented_apartments, class_name: "Apartment", foreign_key: "tenant_id"
   has_many :owned_apartments, class_name: "Apartment", foreign_key: "landlord_id"
 
+
+
   def apartments
     # DONT FORGET TO MIGRATE WITH A ROLE IN YOUR USER GUYS
     if self.role == "tenant"

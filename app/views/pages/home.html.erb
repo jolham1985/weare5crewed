@@ -6,3 +6,16 @@
 <% else %>
   <%= link_to "Sign in Please", new_user_session_path %>
 <% end %>
+
+<br>
+
+  <%= simple_form_for([current_user, @issue]) do |f| %>
+    <%= f.input :photo,as: :file, input_html: { accept: "image/*", capture: "camera" } %>
+  <% end %>
+
+<div class="buttons">
+  <ul class="list-inline">
+      <li><a class="negative" href="#"><i class="fa fa-times "></i></a></li>
+      <li><a class="positive" href="#"><i class="fa fa-check"></i></a></li>
+    </ul>
+</div>

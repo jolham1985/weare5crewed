@@ -1,0 +1,16 @@
+<h1>Issues#index</h1>
+<p>I'm in the IssuesController</p>
+
+<%= link_to "Edit my Issue", edit_user_issue_path(params[:user_id], 1) %> <!-- replace 1 with the actual id -->
+
+
+<ul>
+<% @issues.each do |issue| %>
+  <li>
+    <%= issue.name %>
+    <%= link_to "Show", user_issue_path(current_user.id, issue.id) %>
+    <%= link_to "Edit", edit_user_issue_path(params[:user_id], issue.id) %>
+    <%= link_to "Delete", user_issue_path(current_user.id, issue.id), method: :delete %>
+  </li>
+<% end %>
+</ul>
