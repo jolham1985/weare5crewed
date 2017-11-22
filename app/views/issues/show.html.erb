@@ -1,0 +1,5 @@
+<h1>Issues#Show</h1>
+
+<%= @issue.name %>
+<%= link_to "Edit", edit_user_issue_path(current_user.id, @issue.id) %>
+<%= link_to "Delete", user_issue_path(current_user.id, @issue.id), method: :delete %>
