@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171122130201) do
+ActiveRecord::Schema.define(version: 20171123120554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "question_id"
+    t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["user_id"], name: "index_answers_on_user_id"
+  end
 
   create_table "apartments", force: :cascade do |t|
     t.string "address"
@@ -44,14 +53,41 @@ ActiveRecord::Schema.define(version: 20171122130201) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "issue_hierarchies", id: false, force: :cascade do |t|
+    t.integer "ancestor_id", null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations", null: false
+    t.index ["ancestor_id", "descendant_id", "generations"], name: "issue_anc_desc_idx", unique: true
+    t.index ["descendant_id"], name: "issue_desc_idx"
+  end
+
   create_table "issues", force: :cascade do |t|
     t.bigint "apartment_id"
     t.string "name"
     t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "parent_id"
     t.index ["apartment_id"], name: "index_issues_on_apartment_id"
     t.index ["category_id"], name: "index_issues_on_category_id"
+  end
+
+  create_table "question_hierarchies", id: false, force: :cascade do |t|
+    t.integer "ancestor_id", null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations", null: false
+    t.index ["ancestor_id", "descendant_id", "generations"], name: "question_anc_desc_idx", unique: true
+    t.index ["descendant_id"], name: "question_desc_idx"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.integer "parent_id"
+    t.string "content"
+    t.boolean "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "issue_id"
+    t.index ["issue_id"], name: "index_questions_on_issue_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -79,6 +115,9 @@ ActiveRecord::Schema.define(version: 20171122130201) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "answers", "users"
   add_foreign_key "issues", "apartments"
   add_foreign_key "issues", "categories"
+  add_foreign_key "questions", "issues"
 end
