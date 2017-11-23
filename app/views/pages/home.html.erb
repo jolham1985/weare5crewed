@@ -8,10 +8,11 @@
 <% end %>
 
 <br>
-
+<% if current_user %>
   <%= simple_form_for([current_user, @issue]) do |f| %>
     <%= f.input :photo,as: :file, input_html: { accept: "image/*", capture: "camera" } %>
   <% end %>
+<% end %>
 
 <div class="buttons">
   <ul class="list-inline">
