@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171123120554) do
+ActiveRecord::Schema.define(version: 20171123115631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.bigint "user_id"
+    t.bigint "question_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "question_id"
     t.index ["question_id"], name: "index_answers_on_question_id"
     t.index ["user_id"], name: "index_answers_on_user_id"
   end
@@ -53,21 +53,12 @@ ActiveRecord::Schema.define(version: 20171123120554) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "issue_hierarchies", id: false, force: :cascade do |t|
-    t.integer "ancestor_id", null: false
-    t.integer "descendant_id", null: false
-    t.integer "generations", null: false
-    t.index ["ancestor_id", "descendant_id", "generations"], name: "issue_anc_desc_idx", unique: true
-    t.index ["descendant_id"], name: "issue_desc_idx"
-  end
-
   create_table "issues", force: :cascade do |t|
     t.bigint "apartment_id"
     t.string "name"
     t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "parent_id"
     t.index ["apartment_id"], name: "index_issues_on_apartment_id"
     t.index ["category_id"], name: "index_issues_on_category_id"
   end
