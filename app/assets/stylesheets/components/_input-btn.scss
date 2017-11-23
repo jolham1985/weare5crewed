@@ -1,16 +1,16 @@
-.btn-tb {
+.input-btn {
   text-align: center;
   margin-top: 160px;
   background-image: (rgba(0,47,75,0.9) 0%,);
 }
 
-.btn-tb a {
+.input-btn a {
   margin-right: 30px;
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 45px;
   display: inline-block;
   position: relative;
-  line-height: 64px;
+  line-height: 45px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eaeaea));
   background-image: -webkit-linear-gradient(top, #f6f6f6, #eaeaea);
   background-image: -moz-linear-gradient(top, #f6f6f6, #eaeaea);
@@ -25,19 +25,7 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
 }
 
-.btn-tb a.negative::before {
-  background-color: red;
-}
-
-.btn-tb a.positive::before {
-  background-color: green;
-}
-
-.btn-tb a.form::before {
-  background-color: blue;
-}
-
-.btn-tb a:active {
+.input-btn a:active {
   top: 1px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#f6f6f6));
   background-image: -webkit-linear-gradient(top, #eaeaea, #f6f6f6);
@@ -47,7 +35,7 @@
   background-image: linear-gradient(top, #eaeaea, #f6f6f6);
 }
 
- .btn-tb a::before{
+ .input-btn a::before{
   content: '';
   position: absolute;
   z-index: -1;
@@ -62,35 +50,10 @@
   opacity: 0.5;
 }
 
-.btn-tb a:active::before {
+.input-btn a:active::before {
   top: -9px;
 }
 
-.btn-tb a:hover::before {
+.input-btn a:hover::before {
   opacity: 1;
 }
-
-.btn-tb a.negative:hover::before {
-  background-color: red;
-}
-
-.btn-tb a.positive:hover::before {
-  background-color: green;
-}
-
-.btn-tb a.form:hover::before {
-  background-color: blue;
-}
-
-#check {
-  color: green;
-}
-
-#times {
-  color: red;
-}
-
-#form {
-  color: blue;
-}
-
