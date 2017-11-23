@@ -56,7 +56,7 @@ end
 private
 
 def issue_params
-  params.require(:issue).permit(:name)
+  params.require(:issue).permit(:name, :photo)
 end
 
 end
