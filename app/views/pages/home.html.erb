@@ -7,9 +7,11 @@
 <br>
 
 <% if current_user %>
+
 <%= simple_form_for([current_user, @issue]) do |f| %>
 <%= f.input :photo,as: :file, input_html: { accept: "image/*", capture: "camera" } %>
-<% end %>
+
+ <% end %>
 <% end %>
 
 <div class="splash-img">
