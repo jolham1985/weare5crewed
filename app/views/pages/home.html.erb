@@ -1,25 +1,29 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-<% if current_user %>
+  <% if current_user %>
   <%= link_to "Upload this pic mr secretary!!!", new_user_issue_path(current_user) %>
-<% else %>
-  <%= link_to "Sign in Please", new_user_session_path %>
-<% end %>
-
+  <% else %>
+  <div class="input-btn"><%= link_to "SIGN IN", new_user_session_path %>
+  <% end %></div>
 <br>
+
 <% if current_user %>
-  <%= simple_form_for([current_user, @issue]) do |f| %>
-    <%= f.input :photo,as: :attachinary, input_html: { accept: "image/*", capture: "camera" } %>
-    <%= f.button :submit %>
-  <% end %>
+
+<%= simple_form_for([current_user, @issue]) do |f| %>
+<%= f.input :photo,as: :file, input_html: { accept: "image/*", capture: "camera" } %>
+
+ <% end %>
 <% end %>
 
-<div class="buttons">
-  <ul class="list-inline">
-      <li><a class="positive" href="#"><i class="fa fa-check" id="check"></i></a></li>
-      <li><a class="negative" href="#"><i class="fa fa-times" id="times"></i></a></li>
-      <br>
-      <li><a class="form" href="#"><i class="fa fa-file-text" id="form"></i></a></li>
-    </ul>
+<div class="splash-img">
+  <%= image_tag "modeloA.svg" %>
 </div>
+
+<div class="btn-tb">
+  <ul class="list-inline">
+    <li><a class="positive" href="#"><i class="fa fa-check" id="check"></i></a></li>
+    <li><a class="negative" href="#"><i class="fa fa-times" id="times"></i></a></li>
+    <br>
+    <li><a class="form" href="#"><i class="fa fa-file-text" id="form"></i></a></li>
+  </ul>
+</div>
+
