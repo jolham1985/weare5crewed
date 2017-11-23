@@ -1,8 +1,3 @@
-// body {
-//   font-family: Arial;
-//   background: #f8f8f8 url(images/bg.jpg);
-// }
-
 .buttons {
   text-align: center;
   margin-top: 160px;
@@ -36,6 +31,10 @@
 
 .buttons a.positive::before {
   background-color: green;
+}
+
+.buttons a.form::before {
+  background-color: blue;
 }
 
 .buttons a:active {
@@ -79,4 +78,19 @@
   background-color: green;
 }
 
+.buttons a.form:hover::before {
+  background-color: green;
+}
+
+#check {
+  color: green;
+}
+
+#times {
+  color: red;
+}
+
+#times {
+  color: blue;
+}
 
