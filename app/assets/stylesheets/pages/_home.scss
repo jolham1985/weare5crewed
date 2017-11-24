@@ -1,6 +1,24 @@
 // Specific CSS for your home-page
-.splash-img {
-  margin: auto;
-  width: 600px;
-  height: 442.62px;
+
+.home-page {
+  width: 100%;
+  height: calc(100vh - 100px);
+  padding: 50px 100px 0 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.home-page__background-image {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+
+.home-page__photo-upload {
+  position: absolute;
+  right: 220px;
+  width: 140px;
+  height: 140px;
 }
