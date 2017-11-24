@@ -24,8 +24,9 @@ end
 def create
   @user = current_user
   @issue = Issue.new(issue_params)
-  @issue.apartment_id = 1
+  @issue.apartment_id = current_user.apartments.first.id
   @issue.category_id = 1
+  @issue.name = label_id.first.description
   if @issue.save
     redirect_to user_issues_path(params[:user_id])
   else
@@ -56,7 +57,16 @@ end
 private
 
 def issue_params
-  params.require(:issue).permit(:name)
+  params.require(:issue).permit(:name, :photo)
 end
 
+def label_id
+  project_id = "screwed-186912"
+  file_name = @issue.photo.fullpath
+  vision = Google::Cloud::Vision.new project: project_id
+  labels = vision.image(file_name).labels
+  labels.reject { |label|
+    label.description.include? "appliance"
+  }
+end
 end

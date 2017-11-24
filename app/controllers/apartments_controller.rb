@@ -45,8 +45,17 @@ def destroy
  @apartment.destroy
  redirect_to user_apartments_path(current_user.id)
   end
+
+def invite
+  UserMailer.invitation(params[:email], params[:apartment_id]).deliver_now
+
+end
+
     private
     def apartment_params
       params.require(:apartment).permit(:address)
    end
+
   end
+
+
