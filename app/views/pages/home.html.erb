@@ -9,7 +9,8 @@
 <% if current_user %>
 
 <%= simple_form_for([current_user, @issue]) do |f| %>
-<%= f.input :photo,as: :file, input_html: { accept: "image/*", capture: "camera" } %>
+<%= f.input :photo,as: :attachinary, input_html: { accept: "image/*", capture: "camera" } %>
+<%= f.button :submit %>
 
  <% end %>
 <% end %>
