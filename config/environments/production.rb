@@ -90,12 +90,18 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  Rails.application.configure do
-
+  # SMTP config
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: "weare5crewed-jolham1985.herokuapp.com" }
+
+  config.action_mailer.smtp_settings = {
+     :address => "smtp.gmail.com",
+     :port => 587,
+     :user_name => "team.5crewed@gmail.com",
+     :password => "5crewedAccount199",
+     :authentication => :plain,
+     :enable_starttls_auto => true
+  }
+
   # or your custom domain name eg. "www.yourdomain.com"
-
-end
-
 end
