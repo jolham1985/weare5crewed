@@ -24,7 +24,7 @@ end
 def create
   @user = current_user
   @issue = Issue.new(issue_params)
-  @issue.apartment_id = 1
+  @issue.apartment_id = current_user.apartments.first.id
   @issue.category_id = 1
   @issue.name = label_id.first.description
   if @issue.save
