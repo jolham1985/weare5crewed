@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show] do
     resources :issues
-    resources :apartments
+    resources :apartments do
+      member do
+        post "invite"
+      end
+    end
   end
 
   root to: 'pages#home'

@@ -17,12 +17,21 @@
   <td><%= link_to 'Show', user_apartment_path(current_user.id,apartment.id) %></td>
       <td><%= link_to 'Edit', edit_user_apartment_path(current_user.id,apartment.id) %></td>
   <td><%= link_to 'delete', user_apartment_path(current_user.id,apartment.id), method: :delete %></td>
+  <td>
+    <%= form_tag(invite_user_apartment_path(current_user, apartment)) do %>
+    <%= email_field_tag "email" %>
+    <%= hidden_field_tag("apartment_id", value = apartment.id) %>
+    <%= submit_tag %>
+<% end %>
+
+  </td>
   </tr>
   <% end %>
 </table>
 
 
 <%= form_with scope: :apartment, local: true do |form| %>
+
 
     <h2> Add a New Apartment to your portfolio</h2>
 
@@ -34,6 +43,8 @@
     <%= form.submit %>
   </p>
 <% end %>
+
+
 
 
 

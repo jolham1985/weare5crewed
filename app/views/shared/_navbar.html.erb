@@ -10,10 +10,10 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-5crewed-item navbar-5crewed-link" %>
+    <!--   <%= link_to "Host", "#", class: "navbar-5crewed-item navbar-5crewed-link" %>
       <%= link_to "Trips", "#", class: "navbar-5crewed-item navbar-5crewed-link" %>
       <%= link_to "Messages", "#", class: "navbar-5crewed-item navbar-5crewed-link" %>
-
+ -->
       <!-- Avatar with dropdown menu -->
       <div class="navbar-5crewed-item">
         <div class="dropdown">
@@ -41,18 +41,21 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
+      <h3>
+      <%= link_to t(".sign_in", default: "Sign Up"), new_user_registration_path, class: "navbar-5crewed-item navbar-5crewed-link" %>
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-5crewed-item navbar-5crewed-link" %>
     <% end %>
+      </h3>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
   <div class="navbar-5crewed-item hidden-md hidden-lg">
     <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown" id="bars"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-5crewed-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><a href="#">Sign up</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="<%= t(".sign_out", default: "Log out") %>">Log out</a></li>
       </ul>
     </div>
   </div>
