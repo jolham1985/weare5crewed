@@ -17,13 +17,13 @@ lamp.children.create(content: "1")
 end
 
 # Adding Users
-User.create(email: "landlord@example.com", password: "qwerty", role: "landlord")
-User.create(email: "tenant@example.com", password: "qwerty", role: "tenant")
+landlord = User.create(email: "landlord@example.com", password: "qwerty", role: "landlord")
+tenant = User.create(email: "tenant@example.com", password: "qwerty", role: "tenant")
 
 # Adding Apartment
-Apartment.create(address: "rua moeda 7, cais do sodre", landlord_id: "1", tenant_id: "")
-Apartment.create(address: "rua direita, lisboa", landlord_id: "1", tenant_id: "2")
-Apartment.create(address: "avenida da liberdade, lisboa", landlord_id: "1", tenant_id: "")
+Apartment.create(address: "rua moeda 7, cais do sodre", landlord: landlord, tenant: tenant)
+Apartment.create(address: "rua direita, lisboa", landlord: landlord, tenant_id: tenant)
+Apartment.create(address: "avenida da liberdade, lisboa", landlord: landlord, tenant: tenant)
 
 # Adding Categories
 
