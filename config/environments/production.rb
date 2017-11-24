@@ -93,7 +93,7 @@ Rails.application.configure do
   Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "yourapp.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: "weare5crewed-jolham1985.herokuapp.com" }
   # or your custom domain name eg. "www.yourdomain.com"
 
 end
