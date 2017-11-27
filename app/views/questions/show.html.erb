@@ -1,3 +1,6 @@
 <h1>Questions#show</h1>
 
 <%= @question.content %>
+
+<%= link_to "Yes", user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "true") %>
+<%= link_to "No", user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "false") %>

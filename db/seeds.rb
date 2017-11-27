@@ -13,9 +13,10 @@ landlord = User.create(email: "landlord@example.com", password: "qwerty", role: 
 tenant = User.create(email: "tenant@example.com", password: "qwerty", role: "tenant")
 
 # Adding Apartment
-Apartment.create(address: "rua moeda 7, cais do sodre", landlord: landlord, tenant: tenant)
-Apartment.create(address: "rua direita, lisboa", landlord: landlord, tenant_id: tenant)
-Apartment.create(address: "avenida da liberdade, lisboa", landlord: landlord, tenant: tenant)
+Apartment.create(address: "rua moeda 7, cais do sodre", landlord: landlord.id, tenant: tenant.id)
+Apartment.create(address: "rua direita, lisboa", landlord: landlord.id, tenant_id: "")
+Apartment.create(address: "avenida da liberdade, lisboa", landlord: landlord.id, tenant: "")
+
 
 # Adding Categories
 

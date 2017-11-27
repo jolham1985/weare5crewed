@@ -61,12 +61,13 @@ def issue_params
 end
 
 def label_id
+  label_list = ["lamp", "oven", "microwave", "laptop"]
   project_id = "screwed-186912"
   file_name = @issue.photo.fullpath
   vision = Google::Cloud::Vision.new project: project_id
   labels = vision.image(file_name).labels
-  labels.reject { |label|
-    label.description.include? "appliance"
+  labels.select { |label|
+    label_list.include?(label.description)
   }
 end
 end
