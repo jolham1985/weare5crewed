@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
     resources :issues do
       resources :questions, only: [:show]
+
+      post 'send_email', to: 'issues#send_email'
     end
     resources :apartments do
       member do

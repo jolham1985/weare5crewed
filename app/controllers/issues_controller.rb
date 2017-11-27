@@ -38,9 +38,16 @@ def edit
   @issue = Issue.find(params[:id])
 end
 
+def send_email
+   @issue = Issue.find(params[:issue_id])
+  user = current_user
+  UserMailer.welcome(user, @issue).deliver_now
+end
+
 def update
   @issue = Issue.find(params[:id])
   @issue.update(issue_params)
+
   if @issue.save
     redirect_to user_issues_path(params[:user_id])
   else
@@ -57,7 +64,7 @@ end
 private
 
 def issue_params
-  params.require(:issue).permit(:name, :photo)
+  params.require(:issue).permit(:name, :comment, :photo)
 end
 
 def label_id
