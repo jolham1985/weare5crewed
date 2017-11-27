@@ -1,10 +1,11 @@
 body {
-  background: #306BA0;
+  background: $off-white;
+  position: relative;
+  z-index: 0;
 }
 
 h1 a {
   color: #0B1E2F;
-  text-transform: uppercase;
 }
 
 h1 a:hover {

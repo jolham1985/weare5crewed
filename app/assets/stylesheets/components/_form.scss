@@ -20,3 +20,11 @@
     text-transform: uppercase;
   }
 }
+
+.apt_list {
+  display: block;
+  width: 60px;
+  td {
+    padding: 10px;
+  }
+}

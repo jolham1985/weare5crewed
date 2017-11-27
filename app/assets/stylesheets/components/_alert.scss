@@ -5,11 +5,18 @@
 .alert {
   margin: 0;
   text-align: center;
-  color: white;
+  color: $off-white;
+  border: 0px;
+  text-transform: uppercase;
+
 }
 .alert-info {
-  background: $green;
+  background: #D59A42;
+  border: 0px;
+  text-transform: uppercase;
 }
 .alert-warning {
-  background: $red;
+  background: #A56C29;
+  border: 0px;
+  text-transform: uppercase;
 }
