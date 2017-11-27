@@ -5,10 +5,27 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    if params[:id].nil?
+    @issue = Issue.find(params[:issue_id])
+    if params[:id] == "0"
       @question = Question.root
+    elsif Question.root == Question.find(params[:id])
+      if params[:query] == "false"
+        redirect_to root_path
+      else
+        question = Question.root.children.where(content: @issue.name).first
+        @question = question.children.first
+        render :show
+      end
+    elsif Question.find(params[:id]).children.empty?
+      redirect_to edit_user_issue_path(current_user.id, @issue.id, answer: params[:query], question: params[:id] )
     else
-      @question = Question.find(params[:id])
+      parent = Question.find(params[:id])
+      if params[:query] == "false"
+        @question = parent.children.last
+      else
+        @question = parent.children.first
+      end
+      render :show
     end
   end
 

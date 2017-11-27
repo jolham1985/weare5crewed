@@ -28,7 +28,7 @@ def create
   @issue.category_id = 1
   @issue.name = label_id.first.description
   if @issue.save
-    redirect_to user_issues_path(params[:user_id])
+    redirect_to user_issue_question_path(current_user.id, @issue.id, 0)
   else
     render 'new'
   end
@@ -38,9 +38,16 @@ def edit
   @issue = Issue.find(params[:id])
 end
 
+def send_email
+   @issue = Issue.find(params[:issue_id])
+  user = current_user
+  UserMailer.welcome(user, @issue).deliver_now
+end
+
 def update
   @issue = Issue.find(params[:id])
   @issue.update(issue_params)
+
   if @issue.save
     redirect_to user_issues_path(params[:user_id])
   else
@@ -57,16 +64,17 @@ end
 private
 
 def issue_params
-  params.require(:issue).permit(:name, :photo)
+  params.require(:issue).permit(:name, :comment, :photo)
 end
 
 def label_id
+  label_list = ["lamp", "oven", "microwave", "laptop"]
   project_id = "screwed-186912"
   file_name = @issue.photo.fullpath
   vision = Google::Cloud::Vision.new project: project_id
   labels = vision.image(file_name).labels
-  labels.reject { |label|
-    label.description.include? "appliance"
+  labels.select { |label|
+    label_list.include?(label.description)
   }
 end
 end
