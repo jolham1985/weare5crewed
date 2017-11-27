@@ -1,18 +1,19 @@
 /* Main navbar */
 .navbar-5crewed {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: #A53540;
+  background: $md-blue;
   transition: all 0.3s ease;
-  height: 100px;
+  height: 70px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #D5E0E2;
 }
 
 /* Logo */
 .navbar-5crewed-brand img {
-  height: 70px;
+  height: 50px;
 }
 
 /* User Avatar */
@@ -27,34 +28,42 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 /* Basic navbar item */
 .navbar-5crewed-item {
   cursor: pointer;
-  padding: 0 20px;
+  padding-top: 10px;
 }
 
 /* Navbar link */
 .navbar-5crewed-link {
-  color: #616668;
-  font-size: 14px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+  opacity: 0.6;
 }
 .navbar-5crewed-link:hover {
   color: #da552f;
   text-decoration: none;
+  opacity: 0.6;
 }
 
 /* Dropdown menu */
 .navbar-5crewed-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
-  border-color: #E6E6E6;
+  border-color: #D59A42;
 }
 .navbar-5crewed-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: #999999 !important;
+  color: #D59A42 !important;
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
@@ -72,6 +81,10 @@
   top: -6px;
   background-color: white;
   transform: rotate(45deg);
-  border-left: 1px solid #E6E6E6;
-  border-top: 1px solid #E6E6E6;
+  border-left: 1px solid #D59A42;
+  border-top: 1px solid #D59A42;
+}
+
+#last {
+  border-top: 1px solid #D59A42;
 }

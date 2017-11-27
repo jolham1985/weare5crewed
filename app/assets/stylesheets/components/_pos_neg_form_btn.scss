@@ -1,16 +1,17 @@
 .btn-tb {
   text-align: center;
-  margin-top: 160px;
+  margin-top: 20px;
   background-image: (rgba(0,47,75,0.9) 0%,);
+  padding: 0px;
 }
 
 .btn-tb a {
   margin-right: 30px;
-  width: 64px;
-  height: 64px;
+  width: 70px;
+  height: 70px;
   display: inline-block;
   position: relative;
-  line-height: 64px;
+  line-height: 70px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eaeaea));
   background-image: -webkit-linear-gradient(top, #f6f6f6, #eaeaea);
   background-image: -moz-linear-gradient(top, #f6f6f6, #eaeaea);
@@ -47,7 +48,7 @@
   background-image: linear-gradient(top, #eaeaea, #f6f6f6);
 }
 
- .btn-tb a::before{
+.btn-tb a::before{
   content: '';
   position: absolute;
   z-index: -1;

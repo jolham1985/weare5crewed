@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :rented_apartments, class_name: "Apartment", foreign_key: "tenant_id"
   has_many :owned_apartments, class_name: "Apartment", foreign_key: "landlord_id"
 
-
+  #  after_create :send_welcome_email
 
   def apartments
     # DONT FORGET TO MIGRATE WITH A ROLE IN YOUR USER GUYS
@@ -37,5 +37,11 @@ class User < ApplicationRecord
       user.save
     end
     user
+  end
+
+  private
+
+  def send_welcome_email
+    UserMailer.welcome(self).deliver_now
   end
 end

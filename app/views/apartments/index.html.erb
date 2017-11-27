@@ -1,40 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
 
 
-<h1>Listing Apartments</h1>
+      <h1>Listing Apartments</h1>
 
-<table>
-  <tr>
-    <th>You Current Apartments</th>
+      <table>
+        <tr>
+          <th>You Current Apartments</th>
 
-    <th colspan="2"></th>
-  </tr>
+          <th colspan="2"></th>
+        </tr>
 
-  <% @apartments.each do |apartment| %>
-    <tr>
-<td><%= apartment.address %></td>
+        <% @apartments.each do |apartment| %>
 
+        <tr>
+          <td><%= apartment.address %></td>
 
-  <td><%= link_to 'Show', user_apartment_path(current_user.id,apartment.id) %></td>
-      <td><%= link_to 'Edit', edit_user_apartment_path(current_user.id,apartment.id) %></td>
-  <td><%= link_to 'delete', user_apartment_path(current_user.id,apartment.id), method: :delete %></td>
-  </tr>
-  <% end %>
-</table>
+          <td><%= link_to 'Show', user_apartment_path(current_user.id,apartment.id) %></td>
+          <td><%= link_to 'Edit', edit_user_apartment_path(current_user.id,apartment.id) %></td>
+          <td><%= link_to 'delete', user_apartment_path(current_user.id,apartment.id), method: :delete %></td>
+          <td>
+            <%= form_tag(invite_user_apartment_path(current_user, apartment)) do %>
+            <%= email_field_tag "email" %>
+            <%= hidden_field_tag("apartment_id", value = apartment.id) %>
+            <%= submit_tag %>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
 
+      <%= form_with scope: :apartment, local: true do |form| %>
+        <h2> Add a New Apartment to your portfolio</h2>
 
-<%= form_with scope: :apartment, local: true do |form| %>
+        <p>
+         <%= form.text_area :address %>
+        </p>
 
-    <h2> Add a New Apartment to your portfolio</h2>
+        <p>
+          <%= form.submit %>
+        </p>
+      <% end %>
 
-<p>
-   <%= form.text_area :address %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
-
+    </div>
+  </div>
+</div>
 
 
 

@@ -5,7 +5,11 @@ Rails.application.routes.draw do
     resources :issues do
       resources :questions, only: [:show]
     end
-    resources :apartments
+    resources :apartments do
+      member do
+        post "invite"
+      end
+    end
   end
 
   root to: 'pages#home'
