@@ -9,9 +9,12 @@
 
       <%= simple_form_for([current_user, @issue]) do |f| %>
       <%= f.input :photo, as: :attachinary, input_html: { accept: "image/*", capture: "camera" } %>
-      <%= f.button :submit %>
+      <%= f.button :submit, class: "btn-submit" %>
       <% end %>
       <% end %>
+    </div>
+    <div class="cam-btn">
+      <div class="cam-icon"><i class="fa fa-camera-retro"></i></div>
     </div>
   </div>
 </div>
@@ -29,15 +32,6 @@
         <li><a href="#">Troubleshooting</a></li>
       </ul>
     </li>
-     <li>
-      <p class="clients">Clients</p>
-
-      <ul>
-        <li><a href="#">Login Area</a></li>
-        <li><a href="#">Support Center</a></li>
-        <li><a href="#">FAQ</a></li>
-      </ul>
-      </li>
     <li>
       <p class="reachus">Contact</p>
 
@@ -48,6 +42,15 @@
         <li>phone-number</li>
       </ul>
     </li>
+    <li>
+      <p class="clients">Clients</p>
 
-    </ul>
-    <footer>
+      <ul>
+        <li><a href="#">Login Area</a></li>
+        <li><a href="#">Support Center</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+ </li>
+  </ul>
+<footer>
+
