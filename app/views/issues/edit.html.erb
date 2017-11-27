@@ -6,3 +6,5 @@
   <%= f.input :name %>
   <%= f.button :submit %>
 <% end %>
+
+<%= link_to "Lets try some questions", user_issue_question_path(current_user.id, @issue.id, 0) %>
