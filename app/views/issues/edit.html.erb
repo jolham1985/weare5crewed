@@ -1,8 +1,63 @@
-<h1>Issues#edit</h1>
-<%= @issue.name %>
 
 
-<%= simple_form_for([current_user, @issue]) do |f| %>
-  <%= f.input :name %>
+<%= render 'shared/issue_cards' %>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="grid-container-issue">
+  <%= @issue.name %>
+
+  <%= simple_form_for([current_user, @issue]) do |f| %>
+  Describe your issue: <%= f.input :name %>
+  <%= cl_image_tag @issue.photo.path, width: 200, height: 300, crop: :fill %>
+  <%= image_tag "modeloC.svg" %>
   <%= f.button :submit %>
-<% end %>
+  <% end %>
+
+</div>
