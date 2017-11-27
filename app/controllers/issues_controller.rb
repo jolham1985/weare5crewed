@@ -28,7 +28,7 @@ def create
   @issue.category_id = 1
   @issue.name = label_id.first.description
   if @issue.save
-    redirect_to user_issues_path(params[:user_id])
+    redirect_to user_issue_question_path(current_user.id, @issue.id, 0)
   else
     render 'new'
   end
