@@ -6,13 +6,24 @@
 
     <% if current_user %>
     <div class="init-square">
-
       <%= simple_form_for([current_user, @issue]) do |f| %>
       <%= f.input :photo, as: :attachinary, input_html: { accept: "image/*", capture: "camera" } %>
-      <%= f.button :submit %>
-      <% end %>
+      <%= f.button :submit, class: "btn-submit" %>
       <% end %>
     </div>
+     <div class="cam-btn">
+      <div class="cam-icon"><i class="fa fa-camera-retro"></i></div>
+    </div>
+
+    <% else %>
+    <div class="call-to-act">
+      content goes here
+    </div>
+
+
+    <% end %>
+
+
   </div>
 </div>
 
@@ -20,7 +31,7 @@
   <ul class="ul-footer">
     <li>
       <p class="home">Home</p>
-      <a class="logo" href="#">5crewed <i>&copy; 2017</i></a>
+      <a class="logo" href="#">5crewed<i>&copy; 2017</i></a>
     </li>
     <li>
       <p class="services">Services</p>
@@ -29,7 +40,17 @@
         <li><a href="#">Troubleshooting</a></li>
       </ul>
     </li>
-     <li>
+    <li>
+      <p class="reachus">Contact</p>
+
+      <ul>
+        <li><a href="mailto:team.5crewed@gmail.com?Subject=Hello%20again" target="_top">Send Mail</a></li>
+        <li><a href="https://www.instagram.com/5crewed">Instagram</a></li>
+        <li><a href="https://www.facebook.com/5crewed/">Facebook</a></li>
+
+      </ul>
+    </li>
+    <li>
       <p class="clients">Clients</p>
 
       <ul>
@@ -37,17 +58,7 @@
         <li><a href="#">Support Center</a></li>
         <li><a href="#">FAQ</a></li>
       </ul>
-      </li>
-    <li>
-      <p class="reachus">Contact</p>
-
-      <ul>
-        <li><a href="#">Email</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li>phone-number</li>
-      </ul>
     </li>
+  </ul>
+  <footer>
 
-    </ul>
-    <footer>

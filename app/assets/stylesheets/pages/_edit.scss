@@ -1,11 +1,33 @@
-.main-container {
-  display: flex;
+.edit-container {
+  display: grid;
+  grid-template-columns: 10% 20% 20% 20% 20% 10%;
+  grid-template-rows: 100px 500px 200px 200px;
+  height: calc(100vh - 70px);
+  justify-content: center;
 }
 
+.issue-img {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  // left: 10px;
+  // background: white;
+  z-index: 100;
+  border: 2px solid #747474;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  justify-content: center;
+  font-size: 10px;
+}
 
-#mini-container {
-  flex: 0 0 450px;
-  height: 1000vh;
-  position: sticky !important; /* !important to override Gmaps inline CSS */
-  top: 0 !important;
+.edit-img {
+  grid-row: 2 / span 3;
+  grid-column: 3 / span1;
+  position: relative;
+  height: 50%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
 }
