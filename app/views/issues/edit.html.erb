@@ -18,7 +18,13 @@
           <b>Question Log</b>
         </div>
       <div class="edit-form-3">
-        questions come here
+        <ul>
+          <% @issue.questionnaire.each do |question| %>
+            <li>
+              <%= question %>
+            </li>
+          <% end %>
+        </ul>
       </div>
       <%= f.submit  %>
       <%= link_to 'Send email',  user_issue_send_email_path(current_user, @issue), method: :post %>
