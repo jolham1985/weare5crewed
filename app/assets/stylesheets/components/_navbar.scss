@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #D5E0E2;
+  // border-bottom: 1px solid #D59A42;
 }
 
 /* Logo */
@@ -58,12 +58,12 @@
 .navbar-5crewed-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
-  border-color: #D59A42;
+  border-color: #0C1E2F;
 }
 .navbar-5crewed-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: #D59A42 !important;
+  color: #0C1E2F !important;
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
@@ -81,10 +81,10 @@
   top: -6px;
   background-color: white;
   transform: rotate(45deg);
-  border-left: 1px solid #D59A42;
-  border-top: 1px solid #D59A42;
+  border-left: 1px solid #0C1E2F;
+  border-top: 1px solid #0C1E2F;
 }
 
 #last {
-  border-top: 1px solid #D59A42;
+  border-top: 1px solid #0C1E2F;
 }
