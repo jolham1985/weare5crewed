@@ -1,7 +1,9 @@
 
 footer {
   background: $md-blue;
-  height: 180px;
+
+  height: 170px;
+
   z-index: -2;
   position: relative;
   padding-top: 8px;
@@ -30,12 +32,10 @@ footer > ul > li ul li{
   // line-height:1.8;
   color: black;
   text-transform: uppercase;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 12px;
-  letter-spacing: 0.3em;
-  text-decoration: none;
-  opacity: 0.6;
+
+  font-size: 14px;
+  font-weight:bold;
+  line-height:1.8;
 }
 
 footer > ul > li ul li a{
@@ -74,7 +74,6 @@ footer a.logo i{
 footer a.logo:before{
   content: '';
   display: inline-block;
-  background: url('images/logoD.svg') no-repeat -19px -70px;
   width: 48px;
   height: 37px;
   vertical-align: text-top;
@@ -108,7 +107,6 @@ footer > ul > li:hover p{
 footer p:before{
     content: '';
     display: inline-block;
-    background: url('../img/sprite.png') no-repeat;
     width: 16px;
     height: 18px;
     margin: 0 12px 0 15px;
@@ -117,10 +115,10 @@ footer p:before{
 
 footer p.home{
   background-color: #0C1E2F;
+  background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
+  background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
+  background-image:linear-gradient(top, #18345d, #0c1e2f);
 
-  background-image:-webkit-linear-gradient(top, #0D2944, #0C1E2F);
-  background-image:-moz-linear-gradient(top, #0D2944, #0C1E2F);
-  background-image:linear-gradient(top, #0D2944, #0C1E2F);
 }
 
 footer p.home:before{
@@ -129,10 +127,9 @@ footer p.home:before{
 
 footer p.services{
   background-color: #0C1E2F;
-
-  background-image:-webkit-linear-gradient(top, #0D2944, #0C1E2F);
-  background-image:-moz-linear-gradient(top, #0D2944, #0C1E2F);
-  background-image:linear-gradient(top, #0D2944, #0C1E2F);
+  background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
+  background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
+  background-image:linear-gradient(top, #18345d, #0c1e2f);
 }
 
 footer p.services:before{
@@ -141,10 +138,9 @@ footer p.services:before{
 
 footer p.reachus{
   background-color: #0C1E2F;
-
-  background-image:-webkit-linear-gradient(top, #0D2944, #0C1E2F);
-  background-image:-moz-linear-gradient(top, #0D2944, #0C1E2F);
-  background-image:linear-gradient(top, #0D2944, #0C1E2F);
+  background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
+  background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
+  background-image:linear-gradient(top, #18345d, #0c1e2f);
 }
 
 footer p.reachus:before{
@@ -153,10 +149,10 @@ footer p.reachus:before{
 
 footer p.clients{
   background-color: #0C1E2F;
+  background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
+  background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
+  background-image:linear-gradient(top, #18345d, #0c1e2f);
 
-  background-image:-webkit-linear-gradient(top, #0D2944, #0C1E2F);
-  background-image:-moz-linear-gradient(top, #0D2944, #0C1E2F);
-  background-image:linear-gradient(top, #0D2944, #0C1E2F);
 }
 
 footer p.clients:before{
