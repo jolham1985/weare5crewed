@@ -1,10 +1,12 @@
 
 footer {
   background: $md-blue;
+
   height: 170px;
+
   z-index: -2;
   position: relative;
-  padding-top: 25px;
+  padding-top: 8px;
 }
 
 footer > ul{
@@ -25,7 +27,12 @@ footer > ul > li{
 
 footer > ul > li ul li{
   // margin-left:43px;
+  // text-transform: uppercase;
+  // font-weight:bold;
+  // line-height:1.8;
+  color: black;
   text-transform: uppercase;
+
   font-size: 14px;
   font-weight:bold;
   line-height:1.8;
@@ -33,7 +40,8 @@ footer > ul > li ul li{
 
 footer > ul > li ul li a{
   text-decoration: none !important;
-  color:#7d8691 !important;
+  color: black !important;
+  // color:#7d8691 !important;
 }
 
 footer > ul > li ul li a:hover{
@@ -106,11 +114,11 @@ footer p:before{
 }
 
 footer p.home{
-  background-color: #0096d6;
-
+  background-color: #0C1E2F;
   background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
   background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
   background-image:linear-gradient(top, #18345d, #0c1e2f);
+
 }
 
 footer p.home:before{
@@ -118,8 +126,7 @@ footer p.home:before{
 }
 
 footer p.services{
-  background-color: #00b274;
-
+  background-color: #0C1E2F;
   background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
   background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
   background-image:linear-gradient(top, #18345d, #0c1e2f);
@@ -130,8 +137,7 @@ footer p.services:before{
 }
 
 footer p.reachus{
-  background-color: #d75ba2;
-
+  background-color: #0C1E2F;
   background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
   background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
   background-image:linear-gradient(top, #18345d, #0c1e2f);
@@ -142,11 +148,11 @@ footer p.reachus:before{
 }
 
 footer p.clients{
-  background-color: #e9ac40;
-
+  background-color: #0C1E2F;
   background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
   background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
   background-image:linear-gradient(top, #18345d, #0c1e2f);
+
 }
 
 footer p.clients:before{

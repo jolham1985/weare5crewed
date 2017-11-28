@@ -17,7 +17,11 @@ class QuestionsController < ApplicationController
         render :show
       end
     elsif Question.find(params[:id]).children.empty?
-      redirect_to edit_user_issue_path(current_user.id, @issue.id, answer: params[:query], question: params[:id] )
+      questions = build_question_array
+      questions.each do |question|
+        @issue.questionnaire << question
+      end
+      redirect_to edit_user_issue_path(current_user.id, @issue.id)
     else
       parent = Question.find(params[:id])
       if params[:query] == "false"
@@ -29,18 +33,18 @@ class QuestionsController < ApplicationController
     end
   end
 
-  def new
+  private
+
+  def build_question_array
+    array = Question.find(params[:id]).self_and_ancestors.reverse.drop(2)
+    questions = []
+    array.each_index do |index|
+      (index + 1) == array.size ? questions << "#{array[index].content} #{humanize(params[:query])}" : questions << "#{array[index].content} #{humanize(array[index + 1].answer)}"
+    end
+    questions
   end
 
-  def create
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
+  def humanize(bool)
+    bool == "true" ? "Yes" : "No"
   end
 end
