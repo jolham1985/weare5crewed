@@ -106,6 +106,39 @@ question_3 = question_1.children.create(content: "Is the battery full?", answer:
 question_6 = question_3.children.create(content:"Is the screen lightening?", answer: true)
 question_7 = question_3.children.create(content:"Did you try to plug it in to fill the battery?", answer: false)
 
+socket = root.children.create(content: "socket")
+question_1 = socket.children.create(content: "Is the socket giving power?")
+
+question_2 = question_1.children.create(content:"Are receptacles crooked?", answer: true)
+question_4 = question_2.children.create(content:"Did you try opening the box to straighten holes?", answer: true)
+question_5 = question_2.children.create(content:"Is there any wire troubles?", answer: false)
+
+question_3 = question_1.children.create(content: "Is it plugged in?", answer: false)
+question_6 = question_3.children.create(content:"Is the main wire damaged?", answer: true)
+question_7 = question_3.children.create(content:"Did you try to plug it in?", answer: false)
+
+fan = root.children.create(content: "fan")
+question_1 = fan.children.create(content: "Is the fan turning on?")
+
+question_2 = question_1.children.create(content:"Are wings running too slow?", answer: true)
+question_4 = question_2.children.create(content:"Did you try to open the fan to see if nothing was keeping blades from moving?", answer: true)
+question_5 = question_2.children.create(content:"Is one of the blades broken?", answer: false)
+
+question_3 = question_1.children.create(content: "Is it plugged in?", answer: false)
+question_6 = question_3.children.create(content:"Is the main wire damaged?", answer: true)
+question_7 = question_3.children.create(content:"Did you try to plug it in?", answer: false)
+
+air_conditioner = root.children.create(content: "air conditioner")
+question_1 = air_conditioner.children.create(content: "Is the air conditioner turning on?")
+
+question_2 = question_1.children.create(content:"Is it heating instead of cooling?", answer: true)
+question_4 = question_2.children.create(content:"Was thermostat set to COOL or fan set to ON?", answer: true)
+question_5 = question_2.children.create(content:"Is the breaker for the outside unit tripped?", answer: false)
+
+question_3 = question_1.children.create(content: "Is it plugged in?", answer: false)
+question_6 = question_3.children.create(content:"Is it set to ON button?", answer: true)
+question_7 = question_3.children.create(content:"Did you try to plug it in?", answer: false)
+
 
 
 
