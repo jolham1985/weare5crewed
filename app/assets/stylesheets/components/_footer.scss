@@ -1,12 +1,10 @@
 
 footer {
   background: $md-blue;
-
-  height: 170px;
-
+  height: 190px;
   z-index: -2;
   position: relative;
-  padding-top: 8px;
+  padding-top: 10px;
 }
 
 footer > ul{
@@ -118,6 +116,7 @@ footer p.home{
   background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
   background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
   background-image:linear-gradient(top, #18345d, #0c1e2f);
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
 
 }
 
@@ -130,6 +129,7 @@ footer p.services{
   background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
   background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
   background-image:linear-gradient(top, #18345d, #0c1e2f);
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
 }
 
 footer p.services:before{
@@ -141,6 +141,7 @@ footer p.reachus{
   background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
   background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
   background-image:linear-gradient(top, #18345d, #0c1e2f);
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
 }
 
 footer p.reachus:before{
@@ -152,6 +153,7 @@ footer p.clients{
   background-image:-webkit-linear-gradient(top, #18345d, #0c1e2f);
   background-image:-moz-linear-gradient(top, #18345d, #0c1e2f);
   background-image:linear-gradient(top, #18345d, #0c1e2f);
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
 
 }
 
