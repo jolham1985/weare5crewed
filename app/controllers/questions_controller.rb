@@ -21,8 +21,7 @@ class QuestionsController < ApplicationController
       questions.each do |question|
         @issue.questionnaire << question
       end
-      byebug
-      redirect_to edit_user_issue_path(current_user.id, @issue.id, answer: params[:query], question: params[:id] )
+      redirect_to edit_user_issue_path(current_user.id, @issue.id)
     else
       parent = Question.find(params[:id])
       if params[:query] == "false"
