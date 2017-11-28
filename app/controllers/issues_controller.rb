@@ -26,11 +26,16 @@ def create
   @issue = Issue.new(issue_params)
   @issue.apartment_id = current_user.apartments.first.id
   @issue.category_id = 1
-  @issue.name = label_id.first.description
-  if @issue.save
-    redirect_to user_issue_question_path(current_user.id, @issue.id, 0)
+  results = label_id
+  if results.empty?
+    redirect_to root_path, alert: "Couldn't find the object in the database"
   else
-    render 'new'
+    @issue.name = results.first.description
+    if @issue.save
+      redirect_to user_issue_question_path(current_user.id, @issue.id, 0)
+    else
+      render 'new'
+    end
   end
 end
 
@@ -68,7 +73,7 @@ def issue_params
 end
 
 def label_id
-  label_list = ["lamp", "oven", "microwave", "laptop"]
+  label_list = ["lamp", "kettle", "microwave", "laptop", "phone", "oven", "tablet", "projector", "tv"]
   project_id = "screwed-186912"
   file_name = @issue.photo.fullpath
   vision = Google::Cloud::Vision.new project: project_id
