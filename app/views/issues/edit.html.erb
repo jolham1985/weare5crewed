@@ -2,27 +2,18 @@
   <div class="edit-container">
     <div class="row">
       <%= @issue.name %>
+      <%= cl_image_tag @issue.photo.path, class: "issue-img" %>
+    </div>
 
-      <div class="issue-img">
-        <%= cl_image_tag @issue.photo.path %>
-      </div>
-
-        <!-- FORM -->
-        <%= simple_form_for([current_user, @issue]) do |f| %>
-        Describe your issue: <%= f.input :name %>
-
-      </div>
-
-      <div class="edit-img">
-        <%= image_tag "modeloC.svg" %>
-      </div>
-
-
+    <div class="edit-img">
+      <%= image_tag "modeloC.svg" %>
     </div>
 
     <div class="row">
       <div class="col-md-12">
-
+        <!-- FORM -->
+        <%= simple_form_for([current_user, @issue]) do |f| %>
+        Describe your issue: <%= f.input :name %>
         <%= f.input :comment %>
         <%= f.submit  %>
         <%= link_to 'Send email',  user_issue_send_email_path(current_user, @issue), method: :post %>
