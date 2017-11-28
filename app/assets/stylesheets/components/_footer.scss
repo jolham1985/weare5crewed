@@ -1,10 +1,10 @@
 
 footer {
   background: $md-blue;
-  height: 245px;
+  height: 180px;
   z-index: -2;
   position: relative;
-  padding-top: 25px;
+  padding-top: 8px;
 }
 
 footer > ul{
@@ -25,14 +25,23 @@ footer > ul > li{
 
 footer > ul > li ul li{
   // margin-left:43px;
+  // text-transform: uppercase;
+  // font-weight:bold;
+  // line-height:1.8;
+  color: black;
   text-transform: uppercase;
-  font-weight:bold;
-  line-height:1.8;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+  opacity: 0.6;
 }
 
 footer > ul > li ul li a{
   text-decoration: none !important;
-  color:#7d8691 !important;
+  color: black !important;
+  // color:#7d8691 !important;
 }
 
 footer > ul > li ul li a:hover{
@@ -107,11 +116,11 @@ footer p:before{
 }
 
 footer p.home{
-  background-color: #0096d6;
+  background-color: #0C1E2F;
 
-  background-image:-webkit-linear-gradient(top, #0096d6, #008ac6);
-  background-image:-moz-linear-gradient(top, #0096d6, #008ac6);
-  background-image:linear-gradient(top, #0096d6, #008ac6);
+  background-image:-webkit-linear-gradient(top, #0D2944, #0C1E2F);
+  background-image:-moz-linear-gradient(top, #0D2944, #0C1E2F);
+  background-image:linear-gradient(top, #0D2944, #0C1E2F);
 }
 
 footer p.home:before{
@@ -119,11 +128,11 @@ footer p.home:before{
 }
 
 footer p.services{
-  background-color: #00b274;
+  background-color: #0C1E2F;
 
-  background-image:-webkit-linear-gradient(top, #00b274, #00a46b);
-  background-image:-moz-linear-gradient(top, #00b274, #00a46b);
-  background-image:linear-gradient(top, #00b274, #00a46b);
+  background-image:-webkit-linear-gradient(top, #0D2944, #0C1E2F);
+  background-image:-moz-linear-gradient(top, #0D2944, #0C1E2F);
+  background-image:linear-gradient(top, #0D2944, #0C1E2F);
 }
 
 footer p.services:before{
@@ -131,11 +140,11 @@ footer p.services:before{
 }
 
 footer p.reachus{
-  background-color: #d75ba2;
+  background-color: #0C1E2F;
 
-  background-image:-webkit-linear-gradient(top, #d75ba2, #c75496);
-  background-image:-moz-linear-gradient(top, #d75ba2, #c75496);
-  background-image:linear-gradient(top, #d75ba2, #c75496);
+  background-image:-webkit-linear-gradient(top, #0D2944, #0C1E2F);
+  background-image:-moz-linear-gradient(top, #0D2944, #0C1E2F);
+  background-image:linear-gradient(top, #0D2944, #0C1E2F);
 }
 
 footer p.reachus:before{
@@ -143,11 +152,11 @@ footer p.reachus:before{
 }
 
 footer p.clients{
-  background-color: #e9ac40;
+  background-color: #0C1E2F;
 
-  background-image:-webkit-linear-gradient(top, #e9ac40, #d89f3b);
-  background-image:-moz-linear-gradient(top, #e9ac40, #d89f3b);
-  background-image:linear-gradient(top, #e9ac40, #d89f3b);
+  background-image:-webkit-linear-gradient(top, #0D2944, #0C1E2F);
+  background-image:-moz-linear-gradient(top, #0D2944, #0C1E2F);
+  background-image:linear-gradient(top, #0D2944, #0C1E2F);
 }
 
 footer p.clients:before{
