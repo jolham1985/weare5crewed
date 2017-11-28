@@ -27,7 +27,7 @@ question_3 = question_1.children.create(content:"Is it plugged in?", answer: fal
 question_6 = question_3.children.create(content:"Is the external wire damaged?", answer: true)
 question_7 = question_3.children.create(content:"Have you plugged it in?", answer: false)
 
-microwave = root.children.create(content: "micro-wave")
+microwave = root.children.create(content: "microwave")
 question_1 = microwave.children.create(content: "Is the micro-wave turning on?")
 
 question_2 = question_1.children.create(content:"Is there sparkles in it when turned on?", answer: true)
