@@ -9,4 +9,9 @@ class EngineersController < ApplicationController
       # marker.infowindow render_to_string(partial: "/engineers/map_box", locals: { engineer: engineer })
     end
   end
+
+  def show
+    @engineer = Engineer.find(params[:id])
+    redirect_to user_issue_path(params[:user_id], params[:issue_id]), notice: "Forwarded your issue to #{@engineer.name}"
+  end
 end
