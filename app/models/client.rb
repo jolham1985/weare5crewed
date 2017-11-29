@@ -50,3 +50,4 @@ class Yelp
     response.parse
   end
 end
+end
