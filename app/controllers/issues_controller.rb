@@ -58,7 +58,7 @@ def update
   @issue.update(issue_params)
 
   if @issue.save
-    redirect_to user_issues_path(params[:user_id])
+    redirect_to user_issue_engineers_path(params[:user_id], @issue.id)
   else
     render 'edit'
   end
