@@ -1,40 +1,40 @@
-
-
-
-
-
-<div class="container">
-  <%= @issue.name %>
-
-  <div class="row">
-
-    <div class="col-xs-6 col-md-6">
-      <%= cl_image_tag @issue.photo.path, width: 200, height: 300, crop: :fill %>
-
-        <!-- FORM -->
-        <%= simple_form_for([current_user, @issue]) do |f| %>
-            Describe your issue: <%= f.input :name %>
-
-
+<div class="main-edit">
+  <div class="edit-container">
+    <div class="issue-img">
+      <%= image_tag @issue.photo.fullpath, width: 118, height: 118, crop: :fill %>
     </div>
 
-    <div class="col-xs-6 col-md-6" >
-      <%= image_tag "modeloC.svg" %>
+    <div class="edit-form-1">
+      <!-- FORM -->
+      <div class="edit-title">
+        <%= @issue.name %>
+      </div>
+      <%= simple_form_for([current_user, @issue]) do |f| %>
+      <!-- Describe your issue: <%= f.input :name %> -->
+      <div class="edit-sub-title"><%= f.input :comment %></div>
     </div>
-
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-
-      <%= f.input :comment %>
+    <div class="edit-form-2">
+      <div class="edit-sub-title">
+        <b>Question Log</b>
+      </div>
+      <div class="edit-form-3">
+        <ul>
+          <% @issue.questionnaire.each do |question| %>
+            <li>
+              <%= question %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
       <%= f.submit  %>
       <%= link_to 'Send email',  user_issue_send_email_path(current_user, @issue), method: :post %>
-    <% end %>
+      <% end %>
+    </div>
+
+    <div class="edit-img">
+      <%= image_tag "modeloD.svg" %>
     </div>
   </div>
-
-
 </div>
 
 

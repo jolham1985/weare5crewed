@@ -1,0 +1,5 @@
+meta_product_name: "5crewed"
+meta_title: "5crewed.com"
+meta_description: "5crewed- Don't Get confused,get 5crewed!"
+meta_image: "icon.png"                       # should exist in `app/assets/images/`
+twitter_account: "@5crewed"

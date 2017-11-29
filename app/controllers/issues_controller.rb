@@ -5,7 +5,7 @@ class IssuesController < ApplicationController
 
  def index
   issue_array = []
-  current_user.apartments.each do |apartment|
+  current_user.rented_apartments.each do |apartment|
     apartment.issues.each do |issue|
       issue_array << issue
     end
@@ -24,13 +24,22 @@ end
 def create
   @user = current_user
   @issue = Issue.new(issue_params)
-  @issue.apartment_id = current_user.apartments.first.id
+  if current_user.apartments.empty?
+    rand_apt = Apartment.find(2)
+    rand_apt.update(tenant: @user)
+  end
+  @issue.apartment_id = current_user.rented_apartments.first.id
   @issue.category_id = 1
-  @issue.name = label_id.first.description
-  if @issue.save
-    redirect_to user_issue_question_path(current_user.id, @issue.id, 0)
+  results = label_id
+  if results.empty?
+    redirect_to root_path, alert: "Couldn't find the object in the database"
   else
-    render 'new'
+    @issue.name = results.first.description
+    if @issue.save
+      redirect_to user_issue_question_path(current_user.id, @issue.id, 0)
+    else
+      render 'new'
+    end
   end
 end
 
@@ -68,7 +77,7 @@ def issue_params
 end
 
 def label_id
-  label_list = ["lamp", "oven", "microwave", "laptop"]
+  label_list = ["lamp", "kettle", "microwave", "laptop", "phone", "oven", "tablet", "projector", "television"]
   project_id = "screwed-186912"
   file_name = @issue.photo.fullpath
   vision = Google::Cloud::Vision.new project: project_id

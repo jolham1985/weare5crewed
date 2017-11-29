@@ -7,11 +7,12 @@
 
 .btn-tb a {
   margin-right: 30px;
-  width: 70px;
-  height: 70px;
+
+  width: 55px;
+  height: 55px;
   display: inline-block;
   position: relative;
-  line-height: 70px;
+  line-height: 55px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eaeaea));
   background-image: -webkit-linear-gradient(top, #f6f6f6, #eaeaea);
   background-image: -moz-linear-gradient(top, #f6f6f6, #eaeaea);
@@ -36,6 +37,10 @@
 
 .btn-tb a.form::before {
   background-color: blue;
+}
+
+.btn-tb a.success:before {
+  background-color: black;
 }
 
 .btn-tb a:active {
@@ -83,6 +88,10 @@
   background-color: blue;
 }
 
+.btn-tb a.form:hover::before {
+  background-color: black;
+}
+
 #check {
   color: green;
 }
@@ -95,3 +104,6 @@
   color: blue;
 }
 
+#success {
+  color: black;
+}

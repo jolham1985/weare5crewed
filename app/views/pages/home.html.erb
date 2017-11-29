@@ -6,15 +6,53 @@
 
     <% if current_user %>
     <div class="init-square">
-
       <%= simple_form_for([current_user, @issue]) do |f| %>
       <%= f.input :photo, as: :attachinary, input_html: { accept: "image/*", capture: "camera" } %>
       <%= f.button :submit, class: "btn-submit" %>
       <% end %>
-      <% end %>
     </div>
     <div class="cam-btn">
       <div class="cam-icon"><i class="fa fa-camera-retro"></i></div>
+    </div>
+    <% else %>
+
+    <div class="superior-bar">
+      <span>having trouble with household appliances?</span>
+      <br>
+      <br>
+      don't get confused
+      <br>
+      get 5crewed!
+    </div>
+
+  </div>
+
+  <div class="tutorial">
+
+    <div class="icon1"><i class="fa fa-camera-retro" id="i1"></i></div>
+    <div class="step-1"> <span><br>1</span><br>take a photo or upload one to 5crewed.com</div>
+    <div class="icon2"><i class="fa fa-list-alt" id="i2"></i></div>
+    <div class="step-2"> <span><br>2</span> <br> answer some troubleshooting questions and solve your problem with us</div>
+    <div class="icon3"><i class="fa fa-envelope-o" id="i3"></i></div>
+    <div class="step-3"> <span><br>3</span> <br> or send it to your local engineer with all the key information he needs to help you!
+    </div>
+
+  </div>
+
+  <% end %>
+</div>
+
+
+
+<div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModalLabel" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="loader">Loading...</div>
+      </div>
+      <div class="modal-footer">
+        <h3>Uploading Photo</h3>
+      </div>
     </div>
   </div>
 </div>
@@ -23,7 +61,7 @@
   <ul class="ul-footer">
     <li>
       <p class="home">Home</p>
-      <a class="logo" href="#">5crewed <i>&copy; 2017</i></a>
+      <a class="logo" href="#">5crewed<i>&copy; 2017</i></a>
     </li>
     <li>
       <p class="services">Services</p>
@@ -44,13 +82,11 @@
     </li>
     <li>
       <p class="clients">Clients</p>
-
       <ul>
         <li><a href="#">Login Area</a></li>
-        <li><a href="#">Support Center</a></li>
         <li><a href="#">FAQ</a></li>
       </ul>
- </li>
+    </li>
   </ul>
-<footer>
+</footer>
 

@@ -2,58 +2,29 @@
 .main {
   background: $off-white;
   z-index: 1;
-  padding: 20px 0px 200px;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 20% 70% 10%;
-  grid-template-row: 95% 5%;
-  height: calc(100vh - 70px);
+  grid-template-columns: 20px repeat(6, 1fr) 20px;
+  grid-template-rows: 400px;
+  // height: calc(100vh - 70px);
   justify-content: center;
 }
-
-.splash-img {
-  grid-row: 1 / span 1;
-  grid-column: 2 / span1;
-  position: relative;
-  height: 80%;
-  width: 80%;
-  padding-top: 20px;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
-}
-
-.init-square {
-  grid-row: 1 / span 1;
-  grid-column: 1 / span1;
-  position: relative;
-  width: 150px;
-  height: 150px;
-  left: 10px;
-  background: white;
-  z-index: 100;
-  border: 2px solid #747474;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  justify-content: center;
-  font-size: 10px;
-}
-
 .cam-btn {
   grid-row: 1 / span 1;
-  grid-column: 1 / span1;
+  grid-column: 2 / span 1;
   position: relative;
   width: 150px;
   height: 150px;
+  top: 10px;
   left: 10px;
   background: white;
+  border-radius: 50%;
   z-index: 100;
-  border: 2px solid #747474;
+  border: 1px solid #747474;
+  border-radius: 50%;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   text-align: center;
   justify-content: center;
@@ -61,11 +32,271 @@
 }
 
 .cam-icon {
-    margin-top: auto;
-    margin-bottom: auto;
+    // margin-top: 55px;
+    font-size: 95px;
   }
 
-.camera {
-  color: #747474;
-  // background: image-url("public/favicon.ico")
-}
+  .camera {
+    color: #747474;
+  }
+
+  .superior-bar {
+    background: $off-white;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 4;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #0c1e2f;
+    z-index: 100;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    span {
+      margin-top: auto;
+      margin-bottom: auto;
+      font-size: 32px;
+      background: #77aed7;
+
+    }
+  }
+
+  .splash-img {
+    grid-row: 1 / span 1;
+    grid-column: 5 / span 3;
+    position: relative;
+    height: 60%;
+    width: 60%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+
+  .tutorial {
+    display: grid;
+    grid-template-columns: 20px repeat(6, 1fr) 20px;
+    grid-template-rows: 25px 50px 25px 140px 25px;
+    background-color: #0c1e2f;
+  }
+
+  .icon1 {
+    grid-row: 2 / span 1 !important;
+    grid-column: 2 / span 2 !important;
+    position: relative;
+    font-size: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background-color: $off-white;
+    color: #0c1e2f;
+    width: 100px;
+    height: 100px;
+    vertical-align: center;
+    .fa {
+      margin-top: 18px;
+      margin-left: 20px;
+    }
+  }
+
+  .icon2 {
+    grid-row: 2 / span 1 !important;
+    grid-column: 4 / span 2 !important;
+    position: relative;
+    font-size: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background-color: $off-white;
+    color: #0c1e2f;
+    width: 100px;
+    height: 100px;
+    vertical-align: center;
+    .fa {
+      margin-top: 21px;
+      margin-left: 19px;
+    }
+  }
+
+  .icon3 {
+    grid-row: 2 / span 1 !important;
+    grid-column: 6 / span 2 !important;
+    position: relative;
+    font-size: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background-color: $off-white;
+    color: #0c1e2f;
+    width: 100px;
+    height: 100px;
+    vertical-align: center;
+    .fa {
+      margin-top: 17px;
+      margin-left: 20px;
+    }
+  }
+
+  .step-1 {
+    grid-row: 4 / span 1 !important;
+    grid-column: 2 / span 2 !important;
+    color: $off-white;
+    text-align: center;
+    margin-bottom: auto;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    span {
+      font-size: 30px;
+      font-style: italic;
+      padding-bottom: 10px;
+    }
+  }
+  .step-2 {
+    grid-row: 4 / span 1 !important;
+    grid-column: 4 / span 2 !important;
+    color: $off-white;
+    text-align: center;
+    margin-bottom: auto;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    span {
+      font-size: 30px;
+      font-style: italic;
+      padding-bottom: 10px;
+    }
+  }
+  .step-3 {
+    grid-row: 4 / span 1 !important;
+    grid-column: 6 / span 2 !important;
+    color: $off-white;
+    text-align: center;
+    padding-top: none;
+    margin-bottom: auto;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    span {
+      font-size: 30px;
+      font-style: italic;
+      padding-bottom: 10px;
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    .main {
+      padding: 0px 0px 140px;
+    }
+
+    .splash-img {
+      margin-top: 60px;
+      height: 90%;
+      width: 90%;
+    }
+
+    .cam-btn {
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+      left: 25px;
+    }
+
+    footer {
+      display: none;
+    }
+  }
+
+  .modal-body {
+    height: 15em;
+  }
+
+  .modal-footer {
+    text-align: center;
+    color: $md-blue;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+  }
+
+  .loader,
+  .loader:before,
+  .loader:after {
+    background: #77aed7;
+    -webkit-animation: load1 1s infinite ease-in-out;
+    animation: load1 1s infinite ease-in-out;
+    width: 1em;
+    height: 4em;
+  }
+  .loader {
+    color: #77aed7;
+    text-indent: -9999em;
+    margin: 88px auto;
+    position: relative;
+    font-size: 11px;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  .loader:before,
+  .loader:after {
+    position: absolute;
+    top: 0;
+    content: '';
+  }
+  .loader:before {
+    left: -1.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  .loader:after {
+    left: 1.5em;
+  }
+  @-webkit-keyframes load1 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 0;
+      height: 4em;
+    }
+    40% {
+      box-shadow: 0 -2em;
+      height: 5em;
+    }
+  }
+  @keyframes load1 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 0;
+      height: 4em;
+    }
+    40% {
+      box-shadow: 0 -2em;
+      height: 5em;
+    }
+  }
