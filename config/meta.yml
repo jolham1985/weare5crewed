@@ -1,5 +1,5 @@
-meta_product_name: "Product Name"
-meta_title: "Product name - Product tagline"
-meta_description: "Relevant description"
-meta_image: "cover.png"                       # should exist in `app/assets/images/`
-twitter_account: "@product_twitter_account"
+meta_product_name: "5crewed"
+meta_title: "5crewed.com"
+meta_description: "Don't get confused get 5crewed"
+meta_image: "icon.png"                       # should exist in `app/assets/images/`
+twitter_account: "@5crewed"
