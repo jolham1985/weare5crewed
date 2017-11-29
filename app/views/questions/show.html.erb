@@ -5,65 +5,19 @@
   <div class="question-sub-title">
     <%= @question.content %>
   </div>
-  <div class="question-img">
-    <%= image_tag @issue.photo.fullpath %>
-  </div>
+  <%= image_tag @issue.photo.fullpath, class: "question-img" %>
   <div class="btn-tb question-btn">
-    <ul class="list-inline">
-    <li>
       <%= link_to user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "true"), class: "positive" do %>
       <i class="fa fa-check" id="check"></i>
       <% end %>
-    </li>
-    <li>
       <%= link_to user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "false"), class: "negative" do %>
       <i class="fa fa-times" id="times"></i>
       <% end %>
-    </li>
-    <br><br>
-    <li>
-      <%= link_to "#", data: {toggle: "modal", target: "#successModal"}, class: "success" do %>
+      <%= link_to "#", data: {toggle: "modal", target: "#successModal"}, class: "form" do %>
       <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
       <% end %>
-    </li>
-    <li>
-      <%= link_to edit_user_issue_path(current_user.id, params[:issue_id], question: "#{@question.id}"), class: "form" do %>
-      <i class="fa fa-file-text" id="form"></i>
-      <% end %>
-    </li>
-  </ul>
   </div>
 </div>
-
-
-
-
-<div class="btn-tb">
-  <ul class="list-inline">
-    <li>
-      <%= link_to user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "true"), class: "positive" do %>
-      <i class="fa fa-check" id="check"></i>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "false"), class: "negative" do %>
-      <i class="fa fa-times" id="times"></i>
-      <% end %>
-    </li>
-    <br><br>
-    <li>
-      <%= link_to "#", data: {toggle: "modal", target: "#successModal"}, class: "success" do %>
-      <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to edit_user_issue_path(current_user.id, params[:issue_id], question: "#{@question.id}"), class: "form" do %>
-      <i class="fa fa-file-text" id="form"></i>
-      <% end %>
-    </li>
-  </ul>
-</div>
-
 
 <!-- Modal -->
 <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
