@@ -8,7 +8,7 @@
   <div class="question-img">
     <%= image_tag @issue.photo.fullpath %>
   </div>
-  <div class="btn-tb">
+  <div class="btn-tb question-btn">
     <ul class="list-inline">
     <li>
       <%= link_to user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "true"), class: "positive" do %>
