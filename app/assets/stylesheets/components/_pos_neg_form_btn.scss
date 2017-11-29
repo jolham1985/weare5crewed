@@ -6,6 +6,8 @@
 }
 
 .btn-tb a {
+  margin-right: 30px;
+
   width: 55px;
   height: 55px;
   display: inline-block;
@@ -35,6 +37,10 @@
 
 .btn-tb a.form::before {
   background-color: blue;
+}
+
+.btn-tb a.success:before {
+  background-color: black;
 }
 
 .btn-tb a:active {
@@ -82,6 +88,10 @@
   background-color: blue;
 }
 
+.btn-tb a.form:hover::before {
+  background-color: black;
+}
+
 #check {
   color: green;
 }
@@ -94,3 +104,6 @@
   color: blue;
 }
 
+#success {
+  color: black;
+}
