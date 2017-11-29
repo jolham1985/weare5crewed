@@ -1,3 +1,14 @@
+puts "Destroy all records"
+
+Question.destroy_all
+Issue.destroy_all
+Apartment.destroy_all
+User.destroy_all
+Category.destroy_all
+Engineer.destroy_all
+
+puts "Seeding!"
+
 root = Question.create(content: "Is this the kind of appliance whose photo you just took?")
 lamp = root.children.create(content: "lamp")
 question_1 = lamp.children.create(content: "Does the lamp turn on? HINT!#Check if the appliance is plugged in!")

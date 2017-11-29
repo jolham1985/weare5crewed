@@ -25,11 +25,11 @@ def create
   @user = current_user
   @issue = Issue.new(issue_params)
   if current_user.apartments.empty?
-    rand_apt = Apartment.find(2)
+    rand_apt = Apartment.first
     rand_apt.update(tenant: @user)
   end
   @issue.apartment_id = current_user.rented_apartments.first.id
-  @issue.category_id = 1
+  @issue.category = Category.first
   results = label_id
   if results.empty?
     redirect_to root_path, alert: "Couldn't find the object in the database"
