@@ -10,11 +10,41 @@ question_1 = lamp.children.create(content: "Is the lamp turning on?")
 
 question_2 = question_1.children.create(content:"Is it flickering?", answer: true)
 question_4 = question_2.children.create(content:"Did you try tightnening up the bulb a little?", answer: true)
-question_5 = question_2.children.create(content:"Did you try to switch the bulb for a new one", answer: false)
+question_5 = question_2.children.create(content:"Did you try to switch the bulb for a new one?", answer: false)
 
 question_3 = question_1.children.create(content:"Is it plugged in?", answer: false)
 question_6 = question_3.children.create(content:"Have you changed the bulb or the fuse?", answer: true)
 question_7 = question_3.children.create(content:"Have you plugged it in?", answer: false)
+
+question_8 = question_4.children.create(content:"Is the main wire naked or damaged?", answer: true)
+question_9 = question_4.children.create(content:"Did you try to switch the bulb for a new one?", answer: false)
+
+question_10 = question_5.children.create(content:"Is there other appliances not working around?", answer: true)
+question_11 = question_5.children.create(content:"Is it working with the new bulb?", answer: false)
+
+question_12 = question_6.children.create(content:"Is there other appliances not working around?", answer: true)
+question_13 = question_6.children.create(content:"Is there a fuse blown or stripped?", answer: false)
+
+question_14 = question_7.children.create(content:"Did you try switching the bulb to a new one?", answer: true)
+question_15 = question_7.children.create(content:"Is it working ok now?", answer: false)
+
+question_16 = question_8.children.create(content:"???", answer: true)
+question_17 = question_8.children.create(content:"Is there other appliances not lightening?", answer: false)
+
+question_18 = question_9.children.create(content:"Is the main wire naked or damaged?", answer: true)
+question_19 = question_9.children.create(content:"Is it working ok now?", answer: false)
+
+question_20 = question_10.children.create(content:"Did you check the general fuse panel to see if some might be blown or stripped?", answer: true)
+question_21 = question_10.children.create(content:"Is the wire naked or damaged?", answer: false)
+
+
+
+
+
+
+
+
+
 
 kettle = root.children.create(content: "kettle")
 question_1 = kettle.children.create(content: "Is the kettle turning on?")
