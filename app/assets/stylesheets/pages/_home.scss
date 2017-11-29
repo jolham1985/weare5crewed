@@ -226,16 +226,20 @@
       padding: 0px 0px 100px;
     }
 
+    .grid-container {
+      grid-template-columns: none;
+    }
+
     .splash-img {
-      margin-top: 60px;
+      margin-top: 148px;
+      grid-column: 1 / span 2;
       height: 90%;
-      width: 90%;
+      width: 130%;
     }
 
     .cam-btn {
       grid-row: 1 / span 1;
       grid-column: 2 / span 1;
-      left: 25px;
     }
 
     // .tutorial {
