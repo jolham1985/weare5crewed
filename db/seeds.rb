@@ -83,8 +83,8 @@ question_3 = question_1.children.create(content:"Is it plugged in?", answer: fal
 question_6 = question_3.children.create(content:"Have you changed the projector bulb?", answer: true)
 question_7 = question_3.children.create(content:"Have you plugged it in?", answer: false)
 
-tv = root.children.create(content: "tv")
-question_1 = tv.children.create(content: "Is the tv turning on?")
+television = root.children.create(content: "television")
+question_1 = television.children.create(content: "Is the television turning on?")
 
 
 question_2 = question_1.children.create(content:"Is there power but no signal?", answer: true)
@@ -158,3 +158,19 @@ Apartment.create(address: "avenida da liberdade, lisboa", landlord: landlord)
 
 Category.create(name: "electric")
 Category.create(name: "water")
+
+
+#Adding engineers
+
+Engineer.create(name: "Christian Gabriel", address: "23 rue Lakanal, 75015 Paris")
+Engineer.create(name: "Maria Rita Aguiar", address: "Rua de Santa Marta 56, 1150-281 Lisbon")
+Engineer.create(name: "Geert Van Hoolsen", address: "Kinkerstraat 35, 1053 DD Amsterdam")
+Engineer.create(name: "Gillian Redmore", address: "108 Berryfield Road, London SE17")
+Engineer.create(name: "Greg Petechin", address: "258 Flatbush Ave, Brooklyn, NY 11217")
+Engineer.create(name: "Elizabeth Hill", address: "28 Kipling Ave, Etobicoke, ON M8V 4B6")
+Engineer.create(name: "Marta Gutierrez", address: "Calle Ancora, 72, 28045 Madrid")
+Engineer.create(name: "Kukka Peltolta", address: "Alppikatu 82, 00101 Helsinki")
+Engineer.create(name: "Orlando da Silva", address: "R. Sorocaba, 43 - Botafogo, Rio de Janeiro - RJ")
+Engineer.create(name: "Khoshlen Gurvinder", address: "330, 33rd Road, Pali Village, Khar West, Mumbai, Maharashtra 400050")
+
+
