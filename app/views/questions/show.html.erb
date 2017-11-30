@@ -1,12 +1,14 @@
 <div class="show-container">
-  <div class="question-title">
-    <%= @issue.name %>
+  <div class="bubble" id="b1">
+    <div class="question-title">
+      <%= @issue.name %>
+    </div>
+    <div class="question-sub-title">
+      <%= @question.content %>
+    </div>
   </div>
-  <div class="question-sub-title">
-    <%= @question.content %>
-  </div>
-  <%= image_tag @issue.photo.fullpath, class: "question-img" %>
-  <div class="btn-tb question-btn">
+ <%= image_tag @issue.photo.fullpath, class: "question-img" %>
+    <div class="btn-tb question-btn">
       <%= link_to user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "true"), class: "positive" do %>
       <i class="fa fa-check" id="check"></i>
       <% end %>
@@ -14,9 +16,13 @@
       <i class="fa fa-times" id="times"></i>
       <% end %>
       <%= link_to "#", data: {toggle: "modal", target: "#successModal"}, class: "form" do %>
-      <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
       <% end %>
-  </div>
+    </div>
+  <div class="modeloC"> <%= image_tag "modeloC.svg" %> </div>
+  <div class="bubble" id="b2">
+      at any moment your appliance works, just press the success button! <i class="fa fa-star"></i>
+    </div>
 </div>
 
 <!-- Modal -->
