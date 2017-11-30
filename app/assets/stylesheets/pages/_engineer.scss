@@ -65,3 +65,20 @@
   text-decoration: none;
   opacity: 0.1;
 }
+
+@media all and (max-width: 768px) {
+    .enginer-container{
+      display: grid;
+      grid-template-columns: 10px 100% 10px;
+    }
+
+
+    .engineer-list {
+      display: none;
+    }
+
+    .engineer-map {
+      grid-column: 2 / span 6;
+      padding-top: 10px;
+    }
+  }
