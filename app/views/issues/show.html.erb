@@ -1,4 +1,17 @@
 <div class="show-container">
   <h1 class="final-title"><%= @issue.name %></h1>
   <%= image_tag @issue.photo.fullpath, class: "final-img" %>
+  <div class="final-questions">
+    <p class="question-sub-title">Question Log</p>
+    <ul>
+      <% @issue.questionnaire.each do |question| %>
+      <li>
+        <%= question %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <p class="final-comments">
+    <%= @issue.comment %>
+  </p>
 </div>
