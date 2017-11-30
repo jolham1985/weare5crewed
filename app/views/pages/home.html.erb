@@ -11,9 +11,13 @@
       <%= f.button :submit, class: "btn-submit" %>
       <% end %>
     </div>
-    <div class="cam-btn">
-      <div class="cam-icon"><i class="fa fa-camera-retro"></i></div>
+    <div>
+      <div class="cam-btn">
+        <div class="cam-icon"><i class="fa fa-camera-retro"></i></div>
+      </div>
     </div>
+
+    <div class="click-to-up"><span>click me!</span></div>
 
     <% else %>
 
@@ -21,17 +25,20 @@
       <span>having trouble with your </span>
       <br>
       <a href="" class="typewrite" data-period="2000" data-type='[ "oven?", "toaster?", "tablet?", "blender?", "tv?" ]'>
-    <span class="wrap"></span>
-  </a>
-
+        <span class="wrap"></span>
+      </a>
       <br>
       <br>
-      don't get confused
+      <div class="align-cnfsd">don't get confused</div>
       <br>
-      get 5crewed!
+      <div class="sign-up-btn">
+        <%= link_to new_user_registration_path, class: "btn btn-primary" do %>
+        <%= t(".profile", default: "get 5crewed!") %>
+        <% end %>
+      </div>
     </div>
 
-  <% end %>
+    <% end %>
   </div>
 
   <div class="tutorial">
@@ -67,7 +74,8 @@
   <ul class="ul-footer">
     <li>
       <p class="home">Home</p>
-      <a class="logo" href="#">5crewed<i>&copy; 2017</i></a>
+      <div class="footer-img"> <%= image_tag "logoD.svg" %></div>
+      <a class="logo" href="#"><i>2017</i></a>
     </li>
     <li>
       <p class="services">Services</p>

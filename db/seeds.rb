@@ -11,7 +11,7 @@ puts "Seeding!"
 
 root = Question.create(content: "Is this the kind of appliance whose photo you just took?")
 lamp = root.children.create(content: "lamp")
-question_1 = lamp.children.create(content: "Does the lamp turn on? HINT!#Check if the appliance is plugged in!")
+question_1 = lamp.children.create(content: "Does the lamp turn on?")
 # 15.times do |i|
 #   i += 1
 #   node = Question.find_by(content: "#{i}")
@@ -21,12 +21,13 @@ question_1 = lamp.children.create(content: "Does the lamp turn on? HINT!#Check i
 
 question_2 = question_1.children.create(content:"Is it flickering?", answer: true)
 
-question_4 = question_2.children.create(content:"Turn the lamp off.Take the lamp plug out of the socket. Open the plug carefully. Check the fuse of the plug. If the fuse is black or has damage change the fuse. Put the plug back into the socket. Is it still flickering? ", answer: true)
-question_5 = question_2.children.create(content:"Turn the lamp off. Take the lamp plug out of the socket.Try switching the bulb for a new one.Plug the lamp back into the socket. Does it work?", answer: false)
+question_4 = question_2.children.create(content:"Did you try tightening the light bulb? ", answer: true)
+question_5 = question_2.children.create(content:"Did you try to see if the fuse in the wall is blown (don't forget to cut the electricity first)?", answer: false)
 
-question_3 = question_1.children.create(content:"Take the lamp plug out of the socket. Open the plug carefully. Check the fuse of the plug. If the fuse is black or has damage change the fuse. Put the plug back into the socket. Does it work?", answer: false)
-question_6 = question_3.children.create(content:"Take the lamp plug out of the socket.Try switching the bulb for a new one.Plug the lamp back into the socket. Does it work?", answer: true)
-question_7 = question_3.children.create(content:"Is there any damage to the wires of the lamp. ", answer: false)
+question_3 = question_1.children.create(content:"Is the lamp plugged in?", answer: false)
+
+question_6 = question_3.children.create(content:"Did you try screwing the light bulb?", answer: true)
+question_7 = question_3.children.create(content:"Is it working now?", answer: false)
 
 question_8 = question_4.children.create(content:"Is the main wire naked or damaged?", answer: true)
 question_9 = question_4.children.create(content:"Did you try to switch the bulb for a new one?", answer: false)
@@ -34,13 +35,13 @@ question_9 = question_4.children.create(content:"Did you try to switch the bulb 
 question_10 = question_5.children.create(content:"Is there other appliances not working around?", answer: true)
 question_11 = question_5.children.create(content:"Is it working with the new bulb?", answer: false)
 
-question_12 = question_6.children.create(content:"Is there other appliances not working around?", answer: true)
-question_13 = question_6.children.create(content:"Is there a fuse blown or stripped?", answer: false)
+question_12 = question_6.children.create(content:"Did you try replacing the light bulb?", answer: true)
+question_13 = question_6.children.create(content:"Did you try replacing the light bulb?", answer: false)
 
 question_14 = question_7.children.create(content:"Did you try switching the bulb to a new one?", answer: true)
 question_15 = question_7.children.create(content:"Is it working ok now?", answer: false)
 
-question_16 = question_8.children.create(content:"???", answer: true)
+question_16 = question_8.children.create(content:"You should transfer to an engineer to fix it for you", answer: true)
 question_17 = question_8.children.create(content:"Is there other appliances not lightening?", answer: false)
 
 question_18 = question_9.children.create(content:"Is the main wire naked or damaged?", answer: true)
@@ -131,13 +132,23 @@ question_7 = question_3.children.create(content:"Have you plugged it in?", answe
 laptop = root.children.create(content: "laptop")
 question_1 = laptop.children.create(content: "Is the laptop turning on?")
 
-question_2 = question_1.children.create(content:"Is there a key stuck?", answer: true)
-question_4 = question_2.children.create(content:"Did you try cleaning the frame of the key with hydroalcoholic solution?", answer: true)
+question_2 = question_1.children.create(content:"Do you have problems with your battery?", answer: true)
+
+question_4 = question_2.children.create(content:"Did you try to turn it off then on again?", answer: true)
 question_5 = question_2.children.create(content:"Is screen frozen?", answer: false)
 
-question_3 = question_1.children.create(content: "Is the battery full?", answer: false)
-question_6 = question_3.children.create(content:"Is the screen lightening?", answer: true)
-question_7 = question_3.children.create(content:"Did you try to plug it in to fill the battery?", answer: false)
+question_3 = question_1.children.create(content: "Do you have problems with your battery?", answer: false)
+
+question_6 = question_3.children.create(content:"Did you try to turn it off then on again?", answer: true)
+question_7 = question_3.children.create(content:"Did you try to turn it off then on again?", answer: false)
+
+question_8 = question_4.children.create(content:"Is the screen working?", answer: false)
+question_9 = question_4.children.create(content:"Is the screen working??", answer: false)
+
+
+
+
+
 
 socket = root.children.create(content: "socket")
 question_1 = socket.children.create(content: "Is the socket giving power?")
@@ -195,15 +206,15 @@ Category.create(name: "water")
 
 #Adding engineers
 
-Engineer.create(name: "Christian Gabriel", address: "23 rue Lakanal, 75015 Paris")
-Engineer.create(name: "Maria Rita Aguiar", address: "Rua de Santa Marta 56, 1150-281 Lisbon")
-Engineer.create(name: "Geert Van Hoolsen", address: "Kinkerstraat 35, 1053 DD Amsterdam")
-Engineer.create(name: "Gillian Redmore", address: "108 Berryfield Road, London SE17")
-Engineer.create(name: "Greg Petechin", address: "258 Flatbush Ave, Brooklyn, NY 11217")
-Engineer.create(name: "Elizabeth Hill", address: "28 Kipling Ave, Etobicoke, ON M8V 4B6")
-Engineer.create(name: "Marta Gutierrez", address: "Calle Ancora, 72, 28045 Madrid")
-Engineer.create(name: "Kukka Peltolta", address: "Alppikatu 82, 00101 Helsinki")
-Engineer.create(name: "Orlando da Silva", address: "R. Sorocaba, 43 - Botafogo, Rio de Janeiro - RJ")
-Engineer.create(name: "Khoshlen Gurvinder", address: "330, 33rd Road, Pali Village, Khar West, Mumbai, Maharashtra 400050")
+Engineer.create(name: "Carlos Mendes", address: "Rua de Santa Marta 56, 1150-281 Lisbon")
+Engineer.create(name: "Shannon Graybill", address: "Rua Bacelar e Silva 1, 1000-028 Lisbon")
+Engineer.create(name: "Rui Freita", address: "Rua Gonçalves Crespo 2, 1150-176 Lisbon")
+Engineer.create(name: "Andre Bras", address: "Rua de São Paulo 182, 1200-109 Lisbon")
+Engineer.create(name: "Gabriel Dehan", address: "Rua da Sociedade Farmacêutica 3, 1150-341 Lisbon")
+Engineer.create(name: "Nick Major", address: "Av. da Liberdade 23, 1250-096 Lisbon")
+Engineer.create(name: "Rolando Lero", address: "Largo do Leão 3, 1000-046 Lisbon")
+Engineer.create(name: "Silvana Pires", address: "Beco da Moeda 7, 1200-109 Lisbon")
+Engineer.create(name: "Filipe Paiva", address: "Rua das janelas verdes 130, 1200-870 Lisbon")
+Engineer.create(name: "Elisangela Leitão", address: "Rua Braamcamp 28, 1250-096 Lisbon")
 
 
