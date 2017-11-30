@@ -1,0 +1,5 @@
+<div class="text-center">
+  <h1><%= engineer.name %></h1>
+  <h5><%= engineer.address %></h5>
+  <%= link_to "Email Engineer", user_issue_engineer_path(params[:user_id], params[:issue_id], engineer.id), class: "btn btn-primary btn-block" %>
+</div>
