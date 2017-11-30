@@ -1,0 +1,18 @@
+
+<h1>Apartments#new</h1>
+<p>I'm in the Apartments Controller</p>
+
+<%= form_with scope: :apartment, local: true do |form| %>
+
+
+  <p>
+    <%= form.label :address %><br>
+    <%= form.text_area :address %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+

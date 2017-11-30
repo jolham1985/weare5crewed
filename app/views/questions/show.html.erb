@@ -1,0 +1,50 @@
+<div class="show-container">
+  <div class="bubble" id="b1">
+    <div class="question-title">
+      <%= @issue.name %>
+    </div>
+    <div class="question-sub-title">
+      <%= @question.content %>
+    </div>
+  </div>
+ <%= image_tag @issue.photo.fullpath, class: "question-img" %>
+    <div class="btn-tb question-btn">
+      <%= link_to user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "true"), class: "positive" do %>
+      <i class="fa fa-check" id="check"></i>
+      <% end %>
+      <%= link_to user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "false"), class: "negative" do %>
+      <i class="fa fa-times" id="times"></i>
+      <% end %>
+      <%= link_to "#", data: {toggle: "modal", target: "#successModal"}, class: "form" do %>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <% end %>
+    </div>
+  <div class="modeloC"> <%= image_tag "modeloC.svg" %> </div>
+  <div class="bubble" id="b2">
+      at any moment your appliance works, just press the success button! <i class="fa fa-star"></i>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">Success!!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'shared/success' %>
+      </div>
+      <div class="modal-footer">
+        <a target="_blank"
+        href="https://www.facebook.com/dialog/feed?app_id=<%= ENV['FB_ID'] %>&link=<%= "5crewed.com" %>&name=<%= @issue.name %>&picture=<%= @issue.photo.fullpath %>&redirect_uri=http://facebook.com/"
+        class="icon icon-facebook">
+        <button style="width:50%;" type="button" class="btn btn-facebook btn-lg"><i class="fa fa-facebook fa-2"></i> Share on Facebook</button></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://www.example.com&p[images][0]=&p[title]=Title%20Goes%20Here&p[summary]=Description%20goes%20here!" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false"><button style="width:50%;" type="button" class="btn btn-facebook btn-lg"><i class="fa fa-facebook fa-2"></i> Share on Facebook</button></a>
+      </div>
+    </div>
+  </div>
+</div>

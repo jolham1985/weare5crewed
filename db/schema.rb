@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171121172202) do
+ActiveRecord::Schema.define(version: 20171128123355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["user_id"], name: "index_answers_on_user_id"
+  end
 
   create_table "apartments", force: :cascade do |t|
     t.string "address"
@@ -44,14 +53,82 @@ ActiveRecord::Schema.define(version: 20171121172202) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "issues", force: :cascade do |t|
-    t.bigint "apartments_id"
-    t.string "name"
-    t.bigint "categories_id"
+  create_table "clients", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["apartments_id"], name: "index_issues_on_apartments_id"
-    t.index ["categories_id"], name: "index_issues_on_categories_id"
+  end
+
+  create_table "engineers", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
+  end
+
+  create_table "issues", force: :cascade do |t|
+    t.bigint "apartment_id"
+    t.string "name"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "comment"
+    t.text "questionnaire", default: [], array: true
+    t.index ["apartment_id"], name: "index_issues_on_apartment_id"
+    t.index ["category_id"], name: "index_issues_on_category_id"
+  end
+
+  create_table "landlords", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_landlords_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_landlords_on_reset_password_token", unique: true
+  end
+
+  create_table "question_hierarchies", id: false, force: :cascade do |t|
+    t.integer "ancestor_id", null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations", null: false
+    t.index ["ancestor_id", "descendant_id", "generations"], name: "question_anc_desc_idx", unique: true
+    t.index ["descendant_id"], name: "question_desc_idx"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.integer "parent_id"
+    t.string "content"
+    t.boolean "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "issue_id"
+    t.index ["issue_id"], name: "index_questions_on_issue_id"
+  end
+
+  create_table "tenants", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_tenants_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_tenants_on_reset_password_token", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,10 +151,14 @@ ActiveRecord::Schema.define(version: 20171121172202) do
     t.string "last_name"
     t.string "token"
     t.datetime "token_expiry"
+    t.string "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "issues", "apartments", column: "apartments_id"
-  add_foreign_key "issues", "categories", column: "categories_id"
+  add_foreign_key "answers", "questions"
+  add_foreign_key "answers", "users"
+  add_foreign_key "issues", "apartments"
+  add_foreign_key "issues", "categories"
+  add_foreign_key "questions", "issues"
 end

@@ -10,7 +10,6 @@ class User < ApplicationRecord
 
   after_create :send_welcome_email
 
-
   def apartments
     # DONT FORGET TO MIGRATE WITH A ROLE IN YOUR USER GUYS
     if self.role == "tenant"
@@ -45,5 +44,4 @@ class User < ApplicationRecord
   def send_welcome_email
     UserMailer.welcome(self).deliver_now
   end
-
 end

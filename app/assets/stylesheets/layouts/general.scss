@@ -1,0 +1,14 @@
+body {
+  background: $off-white;
+  position: relative;
+  z-index: 0;
+}
+
+h1 a {
+  color: #0B1E2F;
+}
+
+h1 a:hover {
+  text-decoration: none;
+  text-transform: uppercase;
+}

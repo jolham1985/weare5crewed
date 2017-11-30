@@ -17,11 +17,23 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'omniauth-facebook'
+gem "geocoder"
 
 gem 'cloudinary', '1.1.7'
 gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
+gem 'google-cloud-vision'
+gem 'closure_tree'
+gem 'yelp', require: 'yelp'
+gem "coffee-rails"
+gem "gmaps4rails"
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
+
+
 
 group :development, :test do
   gem 'pry-byebug'
@@ -30,4 +42,5 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "letter_opener"
 end

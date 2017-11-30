@@ -11,5 +11,8 @@
 
 // Your CSS partials
 @import "layouts/index";
-@import "components/index";
-@import "pages/index";
+@import "components/_index";
+@import "pages/_index";
+
+// FA
+@import "font-awesome";

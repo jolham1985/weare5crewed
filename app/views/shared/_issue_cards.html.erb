@@ -1,0 +1,43 @@
+<div id="make-3D-space">
+  <div id="issue-card">
+    <div id="issue-front">
+      <div class="shadow"></div>
+      <div class="center-img"><%= cl_image_tag @issue.photo.path, width: 335, height: 500, crop: :fill %></div>
+      <div class="image_overlay"></div>
+      <div id="view_details">more photos</div>
+      <div class="stats">
+        <div class="stats-container">
+          <span class="issue_name">ISSUE NAME</span>
+          <span class="issue_description"><p>ISSUE DESCRIPTION GOES HERE</p></span>
+        </div>
+      </div>
+    </div>
+    <div id="issue-back">
+      <div class="shadow"></div>
+      <div id="carousel">
+        <ul>
+          <li><img src="https://kitt.lewagon.com/placeholder/cities/berlin" alt="" /></li>
+          <li><img src="https://kitt.lewagon.com/placeholder/cities/shanghai" alt="" /></li>
+          <li><img src="https://kitt.lewagon.com/placeholder/cities/tokyo" alt="" /></li>
+        </ul>
+        <div class="arrows-perspective">
+          <div class="carouselPrev">
+            <div class="y"></div>
+            <div class="x"></div>
+          </div>
+          <div class="carouselNext">
+            <div class="y"></div>
+            <div class="x"></div>
+          </div>
+        </div>
+      </div>
+      <div id="flip-back">
+        <div id="cy"></div>
+        <div id="cx"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Jquery API -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
