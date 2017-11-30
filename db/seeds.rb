@@ -20,6 +20,7 @@ question_1 = lamp.children.create(content: "Does the lamp turn on? HINT!#Check i
 # end
 
 question_2 = question_1.children.create(content:"Is it flickering?", answer: true)
+
 question_4 = question_2.children.create(content:"Turn the lamp off.Take the lamp plug out of the socket. Open the plug carefully. Check the fuse of the plug. If the fuse is black or has damage change the fuse. Put the plug back into the socket. Is it still flickering? ", answer: true)
 question_5 = question_2.children.create(content:"Turn the lamp off. Take the lamp plug out of the socket.Try switching the bulb for a new one.Plug the lamp back into the socket. Does it work?", answer: false)
 
@@ -48,21 +49,12 @@ question_19 = question_9.children.create(content:"Is it working ok now?", answer
 question_20 = question_10.children.create(content:"Did you check the general fuse panel to see if some might be blown or stripped?", answer: true)
 question_21 = question_10.children.create(content:"Is the wire naked or damaged?", answer: false)
 
-
-
-
-
-
-
-
-
-
 kettle = root.children.create(content: "kettle")
 question_1 = kettle.children.create(content: "Is the kettle turning on?")
 
 question_2 = question_1.children.create(content:"Is the kettle heating water?", answer: true)
 question_4 = question_2.children.create(content:"Is the kettle leaking?", answer: true)
-question_5 = question_2.children.create(content:"Did you try descale your kettle using white-vinegar", answer: false)
+question_5 = question_2.children.create(content:"Did you try to descale your kettle using white-vinegar", answer: false)
 
 question_3 = question_1.children.create(content:"Is it plugged in?", answer: false)
 question_6 = question_3.children.create(content:"Is the external wire damaged?", answer: true)
