@@ -18,9 +18,30 @@
 }
 
 .engineer {
-  height: 20vh;
-  background-color: $honey;
+  height: 18vh;
+  border: 3px solid #0C1E2F !important;
+  border-radius: 10px;
   position: relative;
+  margin-left: 3px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+  h1 {
+    font-size: 20px !important;
+    color: #0C1E2F;
+    right: 10px;
+  }
+
+  h5 {
+    font-size: 16px;
+    color: $md-blue;
+  }
 }
 
 .engineer-link {
@@ -30,10 +51,34 @@
   right: 0;
   width: 100%;
   z-index: 2;
-  background: black;
+  background: #747474;
   opacity: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
 }
 
 .engineer-link:hover {
+  text-decoration: none;
   opacity: 0.1;
 }
+
+@media all and (max-width: 768px) {
+    .enginer-container{
+      display: grid;
+      grid-template-columns: 10px 100% 10px;
+    }
+
+
+    .engineer-list {
+      display: none;
+    }
+
+    .engineer-map {
+      grid-column: 2 / span 6;
+      padding-top: 10px;
+    }
+  }

@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
 
   .img {
-    width: 700px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 400px;
-    margin-left: 400px;
+    width: 50vw;
+    margin-top: 5vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4vw;
   }
 
   .rails-default-error-page {
     background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
   }
+
+  .error-container {
+  display: grid;
+  grid-template-columns: 20px repeat(1fr) 20px;
+  height: calc(100vh - 70px);
+}
 
   </style>
 </head>
 
 <body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-   <div class="img">
+  <!-- This file lives in public/500.html -->
+  <div class="img">
     <div>
     <img src="erro404.svg">
+    <div>
+    <p align="center">Oupsi, it seems this page doesn't exist!</p>
     </div>
     </div>
+  </div>
 </body>
 </html>
