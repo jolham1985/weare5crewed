@@ -130,10 +130,19 @@
   overflow: hidden
 }
 
-#successModalLabel { text-align: center;}
+#successModalLabel {
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+}
 
 .modal-header .close {
-    margin-top: -28px;
+  margin-top: -28px;
 }
 
 @media (min-width: 768px) {
