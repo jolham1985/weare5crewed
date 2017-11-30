@@ -6,20 +6,22 @@
   <style>
 
   .img {
-    width: 700px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 400px;
-    margin-left: 400px;
+    width: 50vw;
+    margin-top: 5vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4vw;
   }
 
   .rails-default-error-page {
     background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
   }
+
+  .error-container {
+  display: grid;
+  grid-template-columns: 20px repeat(1fr) 20px;
+  height: calc(100vh - 70px);
+}
 
   </style>
 </head>
@@ -29,6 +31,9 @@
   <div class="img">
     <div>
     <img src="erro500.svg">
+    <div>
+    <p align="center">Oupsi, it seems there is an error!</p>
+    </div>
     </div>
   </div>
 </body>
