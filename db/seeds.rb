@@ -49,16 +49,6 @@ question_19 = question_9.children.create(content:"Is it working ok now?", answer
 question_20 = question_10.children.create(content:"Did you check the general fuse panel to see if some might be blown or stripped?", answer: true)
 question_21 = question_10.children.create(content:"Is the wire naked or damaged?", answer: false)
 
-
-
-
-
-
-
-
->>>>>>> 66834f8a739daf1e4aca4078032da953d3ebf9b9
-
-
 kettle = root.children.create(content: "kettle")
 question_1 = kettle.children.create(content: "Is the kettle turning on?")
 
