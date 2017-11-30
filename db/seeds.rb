@@ -10,7 +10,7 @@ question_1 = lamp.children.create(content: "Is the lamp turning on?")
 
 question_2 = question_1.children.create(content:"Is it flickering?", answer: true)
 question_4 = question_2.children.create(content:"Did you try tightnening up the bulb a little?", answer: true)
-question_5 = question_2.children.create(content:"Did you try to switch the bulb for a new one", answer: false)
+question_5 = question_2.children.create(content:"Did you try to switch the bulb for a new one?", answer: false)
 
 question_3 = question_1.children.create(content:"Is it plugged in?", answer: false)
 question_6 = question_3.children.create(content:"Have you changed the bulb or the fuse?", answer: true)
@@ -21,7 +21,7 @@ question_1 = kettle.children.create(content: "Is the kettle turning on?")
 
 question_2 = question_1.children.create(content:"Is the kettle heating water?", answer: true)
 question_4 = question_2.children.create(content:"Is the kettle leaking?", answer: true)
-question_5 = question_2.children.create(content:"Did you try descale your kettle using white-vinegar", answer: false)
+question_5 = question_2.children.create(content:"Did you try to descale your kettle using white-vinegar", answer: false)
 
 question_3 = question_1.children.create(content:"Is it plugged in?", answer: false)
 question_6 = question_3.children.create(content:"Is the external wire damaged?", answer: true)

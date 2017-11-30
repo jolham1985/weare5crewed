@@ -3,9 +3,10 @@
   padding: 15px;
   margin: 1em 0 3em;
   color: #000;
-   background: #f3961c;
+  // background: #f3961c;
+  border: 5px solid #747474 !important;
   border-radius: 10px;
-  background: linear-gradient(top, #f9d835, #f3961c);
+  // background: linear-gradient(top, #f9d835, #f3961c);
 }
 
 /* creates triangle */
@@ -18,5 +19,5 @@
   width: 0;
   border-width: 15px 15px 0;
   border-style: solid;
-  border-color: #f3961c transparent;
+  border-color: #747474 transparent;
 }
