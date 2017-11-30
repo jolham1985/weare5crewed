@@ -12,6 +12,7 @@
   // height: calc(100vh - 70px);
   justify-content: center;
 }
+
 .cam-btn {
   grid-row: 1 / span 1;
   grid-column: 2 / span 1;
@@ -64,6 +65,9 @@
       background: #77aed7;
 
     }
+  }
+  .align-cnfsd {
+    font-size: 18px !important
   }
 
   .typewrite {
@@ -246,10 +250,9 @@
       left: 0px;
     }
 
-
     .tutorial {
-        grid-template-columns: 20px 1fr 20px;
-        grid-template-rows: 25px repeat(6, 120px) 25px;
+      grid-template-columns: 20px 1fr 20px !important;
+      grid-template-rows: 25px repeat(6, 120px) 25px !important;
     }
 
     .icon1, .step-1, .icon2, .step-2, .icon3, .step-3 {
@@ -260,110 +263,110 @@
       margin-top: -65px;
     }
 
-     .icon1 {
-       grid-row: 2 / span 1 !important;
+    .icon1 {
+     grid-row: 2 / span 1 !important;
 
-     }
+   }
 
-    .step-1 {
-      grid-row: 3 / span 1 !important;
+   .step-1 {
+    grid-row: 3 / span 1 !important;
 
-     }
-
-     .icon2 {
-       grid-row: 4 / span 1 !important;
-
-     }
-
-     .step-2 {
-       grid-row: 5 / span 1 !important;
-     }
-
-
-     .icon3 {
-       grid-row: 6 / span 1 !important;
-     }
-
-     .step-3 {
-       grid-row: 7 / span 1 !important;
-     }
-
-    footer {
-      display: none;
-    }
   }
 
-  .loading-body {
-    height: 15em;
-  }
+  .icon2 {
+   grid-row: 4 / span 1 !important;
 
-  .modal-footer {
-    text-align: center;
-    color: $md-blue;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 20px;
-    letter-spacing: 0.3em;
-    text-decoration: none;
-  }
+ }
 
-  .loader,
-  .loader:before,
-  .loader:after {
-    background: #77aed7;
-    -webkit-animation: load1 1s infinite ease-in-out;
-    animation: load1 1s infinite ease-in-out;
-    width: 1em;
+ .step-2 {
+   grid-row: 5 / span 1 !important;
+ }
+
+
+ .icon3 {
+   grid-row: 6 / span 1 !important;
+ }
+
+ .step-3 {
+   grid-row: 7 / span 1 !important;
+ }
+
+ footer {
+  display: none;
+}
+}
+
+.loading-body {
+  height: 15em;
+}
+
+.modal-footer {
+  text-align: center;
+  color: $md-blue;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #77aed7;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #77aed7;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
     height: 4em;
   }
-  .loader {
-    color: #77aed7;
-    text-indent: -9999em;
-    margin: 88px auto;
-    position: relative;
-    font-size: 11px;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-animation-delay: -0.16s;
-    animation-delay: -0.16s;
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
   }
-  .loader:before,
-  .loader:after {
-    position: absolute;
-    top: 0;
-    content: '';
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
   }
-  .loader:before {
-    left: -1.5em;
-    -webkit-animation-delay: -0.32s;
-    animation-delay: -0.32s;
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
   }
-  .loader:after {
-    left: 1.5em;
-  }
-  @-webkit-keyframes load1 {
-    0%,
-    80%,
-    100% {
-      box-shadow: 0 0;
-      height: 4em;
-    }
-    40% {
-      box-shadow: 0 -2em;
-      height: 5em;
-    }
-  }
-  @keyframes load1 {
-    0%,
-    80%,
-    100% {
-      box-shadow: 0 0;
-      height: 4em;
-    }
-    40% {
-      box-shadow: 0 -2em;
-      height: 5em;
-    }
-  }
+}
