@@ -1,6 +1,17 @@
+puts "Destroy all records"
+
+Question.destroy_all
+Issue.destroy_all
+Apartment.destroy_all
+User.destroy_all
+Category.destroy_all
+Engineer.destroy_all
+
+puts "Seeding!"
+
 root = Question.create(content: "Is this the kind of appliance whose photo you just took?")
 lamp = root.children.create(content: "lamp")
-question_1 = lamp.children.create(content: "Is the lamp turning on?")
+question_1 = lamp.children.create(content: "Does the lamp turn on? HINT!#Check if the appliance is plugged in!")
 # 15.times do |i|
 #   i += 1
 #   node = Question.find_by(content: "#{i}")
@@ -9,12 +20,12 @@ question_1 = lamp.children.create(content: "Is the lamp turning on?")
 # end
 
 question_2 = question_1.children.create(content:"Is it flickering?", answer: true)
-question_4 = question_2.children.create(content:"Did you try tightnening up the bulb a little?", answer: true)
-question_5 = question_2.children.create(content:"Did you try to switch the bulb for a new one?", answer: false)
+question_4 = question_2.children.create(content:"Turn the lamp off.Take the lamp plug out of the socket. Open the plug carefully. Check the fuse of the plug. If the fuse is black or has damage change the fuse. Put the plug back into the socket. Is it still flickering? ", answer: true)
+question_5 = question_2.children.create(content:"Turn the lamp off. Take the lamp plug out of the socket.Try switching the bulb for a new one.Plug the lamp back into the socket. Does it work?", answer: false)
 
-question_3 = question_1.children.create(content:"Is it plugged in?", answer: false)
-question_6 = question_3.children.create(content:"Have you changed the bulb or the fuse?", answer: true)
-question_7 = question_3.children.create(content:"Have you plugged it in?", answer: false)
+question_3 = question_1.children.create(content:"Take the lamp plug out of the socket. Open the plug carefully. Check the fuse of the plug. If the fuse is black or has damage change the fuse. Put the plug back into the socket. Does it work?", answer: false)
+question_6 = question_3.children.create(content:"Take the lamp plug out of the socket.Try switching the bulb for a new one.Plug the lamp back into the socket. Does it work?", answer: true)
+question_7 = question_3.children.create(content:"Is there any damage to the wires of the lamp. ", answer: false)
 
 question_8 = question_4.children.create(content:"Is the main wire naked or damaged?", answer: true)
 question_9 = question_4.children.create(content:"Did you try to switch the bulb for a new one?", answer: false)

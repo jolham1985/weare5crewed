@@ -1,8 +1,15 @@
-<div id="map" style="width: 100%; height: 600px;"></div>
-
-
-
- <!-- [...] -->
+<div class="engineer-container">
+  <div class="engineer-list">
+    <% @engineers.each do |engineer| %>
+      <div class="engineer">
+        <h1><%= engineer.name %></h1>
+        <h5><%= engineer.address %></h5>
+        <%= link_to "", user_issue_engineer_path(params[:user_id], params[:issue_id], engineer.id), class: "engineer-link" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="engineer-map" id="map" style="width: 100%; height: 100%;"></div>
+</div>
 
 
 <% content_for :after_js do %>
