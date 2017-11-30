@@ -130,17 +130,35 @@
   overflow: hidden
 }
 
-#successModalLabel { text-align: center;}
+#successModalLabel {
+  color: $md-blue;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 0.7em;
+  text-decoration: none;
+}
 
+#fcb-btn {
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+}
 .modal-header .close {
-    margin-top: -28px;
+  margin-top: -28px;
 }
 
 @media (min-width: 768px) {
   .question-btn {
     grid-column: 4;
   }
-
 }
 
 @media (max-width: 768px) {
