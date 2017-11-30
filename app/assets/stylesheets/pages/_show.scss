@@ -134,4 +134,27 @@
   .question-btn {
     grid-column: 4;
   }
+
+}
+
+@media (max-width: 768px) {
+
+  #b2 {
+    display: none;
+  }
+
+  .modeloC { display: none;
+  }
+
+  .question-btn {
+    grid-column: 3 /span 3 !important;
+  }
+
+  .question-img  {
+    grid-column: 3 / span 3;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
 }
