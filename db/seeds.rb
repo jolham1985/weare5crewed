@@ -98,13 +98,23 @@ question_7 = question_3.children.create(content:"Have you plugged it in?", answe
 laptop = root.children.create(content: "laptop")
 question_1 = laptop.children.create(content: "Is the laptop turning on?")
 
-question_2 = question_1.children.create(content:"Is there a key stuck?", answer: true)
-question_4 = question_2.children.create(content:"Did you try cleaning the frame of the key with hydroalcoholic solution?", answer: true)
+question_2 = question_1.children.create(content:"Do you have problems with your battery?", answer: true)
+
+question_4 = question_2.children.create(content:"Did you try to turn it off then on again?", answer: true)
 question_5 = question_2.children.create(content:"Is screen frozen?", answer: false)
 
-question_3 = question_1.children.create(content: "Is the battery full?", answer: false)
-question_6 = question_3.children.create(content:"Is the screen lightening?", answer: true)
-question_7 = question_3.children.create(content:"Did you try to plug it in to fill the battery?", answer: false)
+question_3 = question_1.children.create(content: "Do you have problems with your battery?", answer: false)
+
+question_6 = question_3.children.create(content:"Did you try to turn it off then on again?", answer: true)
+question_7 = question_3.children.create(content:"Did you try to turn it off then on again?", answer: false)
+
+question_8 = question_4.children.create(content:"Is the screen working?", answer: false)
+question_9 = question_4.children.create(content:"Is the screen working??", answer: false)
+
+
+
+
+
 
 socket = root.children.create(content: "socket")
 question_1 = socket.children.create(content: "Is the socket giving power?")
