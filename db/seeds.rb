@@ -27,6 +27,35 @@ question_3 = question_1.children.create(content:"Take the lamp plug out of the s
 question_6 = question_3.children.create(content:"Take the lamp plug out of the socket.Try switching the bulb for a new one.Plug the lamp back into the socket. Does it work?", answer: true)
 question_7 = question_3.children.create(content:"Is there any damage to the wires of the lamp. ", answer: false)
 
+question_8 = question_4.children.create(content:"Is the main wire naked or damaged?", answer: true)
+question_9 = question_4.children.create(content:"Did you try to switch the bulb for a new one?", answer: false)
+
+question_10 = question_5.children.create(content:"Is there other appliances not working around?", answer: true)
+question_11 = question_5.children.create(content:"Is it working with the new bulb?", answer: false)
+
+question_12 = question_6.children.create(content:"Is there other appliances not working around?", answer: true)
+question_13 = question_6.children.create(content:"Is there a fuse blown or stripped?", answer: false)
+
+question_14 = question_7.children.create(content:"Did you try switching the bulb to a new one?", answer: true)
+question_15 = question_7.children.create(content:"Is it working ok now?", answer: false)
+
+question_16 = question_8.children.create(content:"???", answer: true)
+question_17 = question_8.children.create(content:"Is there other appliances not lightening?", answer: false)
+
+question_18 = question_9.children.create(content:"Is the main wire naked or damaged?", answer: true)
+question_19 = question_9.children.create(content:"Is it working ok now?", answer: false)
+
+question_20 = question_10.children.create(content:"Did you check the general fuse panel to see if some might be blown or stripped?", answer: true)
+question_21 = question_10.children.create(content:"Is the wire naked or damaged?", answer: false)
+
+
+
+
+
+
+
+
+
 
 kettle = root.children.create(content: "kettle")
 question_1 = kettle.children.create(content: "Is the kettle turning on?")
