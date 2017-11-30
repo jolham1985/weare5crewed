@@ -232,14 +232,18 @@
 
     .splash-img {
       margin-top: 148px;
-      grid-column: 1 / span 2;
+      grid-column: 1 / span 1;
       height: 90%;
-      width: 130%;
+    }
+
+    .splash-img {
+      width: 100%;
     }
 
     .cam-btn {
       grid-row: 1 / span 1;
-      grid-column: 2 / span 1;
+      grid-column: 1 / span 1;
+      left: 0px;
     }
 
     // .tutorial {
@@ -285,7 +289,7 @@
     }
   }
 
-  .modal-body {
+  .loading-body {
     height: 15em;
   }
 
