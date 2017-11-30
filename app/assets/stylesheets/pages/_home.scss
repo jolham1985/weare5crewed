@@ -227,12 +227,12 @@
     }
 
     .grid-container {
-      grid-template-columns: none;
+      grid-template-columns: 20px 1fr 20px;
     }
 
     .splash-img {
       margin-top: 148px;
-      grid-column: 1 / span 1;
+      grid-column: 2 / span 1;
       height: 90%;
     }
 
@@ -242,14 +242,16 @@
 
     .cam-btn {
       grid-row: 1 / span 1;
-      grid-column: 1 / span 1;
-      left: 0px;
+      grid-column: 2 / span 1;
+      margin-left: auto;
+      margin-right: auto;
     }
 
 
     .tutorial {
         grid-template-columns: 20px 1fr 20px;
         grid-template-rows: 25px repeat(6, 120px) 25px;
+        margin-top: 305px;
     }
 
     .icon1, .step-1, .icon2, .step-2, .icon3, .step-3 {
