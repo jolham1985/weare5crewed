@@ -33,7 +33,6 @@
 }
 
 .cam-icon {
-  margin-top: 14px;
   font-size: 80px;
 }
 
@@ -41,12 +40,19 @@
   color: #747474;
 }
 
+.cam-btn p {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+}
+
 .click-to-up {
   grid-row: 1 / span 1;
   grid-column: 2 / span 1;
   position: relative;
-  top: 175px;
-  left: -20px;
   height: 14px;
   width: 175px;
   color: #0c1e2f;
@@ -252,12 +258,18 @@
 
   .grid-container {
     grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: 1fr 1fr;
   }
 
   .splash-img {
-    margin-top: 148px;
-    grid-column: 2 / span 1;
+    grid-column: 2;
+    grid-row: 2;
     height: 90%;
+  }
+
+  .superior-bar {
+    grid-row: 1;
+    grid-column: 2;
   }
 
   .splash-img {
@@ -267,14 +279,13 @@
   .cam-btn {
     grid-row: 1 / span 1;
     grid-column: 2 / span 1;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    left: 0px;
   }
 
   .tutorial {
     grid-template-columns: 20px 1fr 20px;
     grid-template-rows: 25px repeat(6, 120px) 25px;
-    margin-top: 305px;
   }
 
   .icon1, .step-1, .icon2, .step-2, .icon3, .step-3 {

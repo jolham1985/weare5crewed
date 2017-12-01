@@ -9,11 +9,10 @@
         <%= question %>
       </li>
       <% end %>
-      <br>
-      <div class="final-cmt"> Your comments: <br>
-      <%= @issue.comment %> </div>
     </ul>
-
   </div>
-
+  <div class="final-questions final-cmt">
+    <p>Your comments:</p>
+    <%= @issue.comment %>
+  </div>
 </div>
