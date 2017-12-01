@@ -126,23 +126,25 @@
 }
 
 .final-questions {
-  grid-row: 3 / span 2;
+  grid-row: 3;
   grid-column: 4 / span 2;
   margin-left: auto;
   p {
     margin-left: auto;
   }
-  .final-cmt {
-   color: $md-blue;
-   text-transform: uppercase;
-   font-weight: 500;
-   font-style: normal;
-   font-size: 16px;
-   letter-spacing: 0.3em;
-   text-decoration: none;
- }
 }
 
+.final-cmt {
+  grid-row: 4;
+  grid-column: 4 / span 2;
+  color: $md-blue;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+}
 
 .final-questions ul {
   list-style: none;
@@ -229,5 +231,18 @@
   .question-img {
     height: 100%;
     width: 100%;
+  }
+
+  .final-title {
+    grid-column: 2 / span 5;
+  }
+
+  .final-questions {
+    grid-column: 2 / span 5;
+  }
+
+  .final-img {
+    grid-column: 3 / span 3;
+    grid-row: 5;
   }
 }

@@ -33,7 +33,6 @@
 }
 
 .cam-icon {
-  margin-top: 14px;
   font-size: 80px;
 }
 
@@ -41,12 +40,19 @@
   color: #747474;
 }
 
+.cam-btn p {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+}
+
 .click-to-up {
   grid-row: 1 / span 1;
   grid-column: 2 / span 1;
   position: relative;
-  top: 175px;
-  left: -20px;
   height: 14px;
   width: 175px;
   color: #0c1e2f;
@@ -269,6 +275,7 @@
     grid-column: 2 / span 1;
     margin-left: auto;
     margin-right: auto;
+    left: 0px;
   }
 
   .tutorial {
