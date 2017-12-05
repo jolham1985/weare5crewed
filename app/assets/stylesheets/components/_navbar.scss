@@ -39,7 +39,7 @@
 
 /* Navbar link */
 .navbar-5crewed-link {
-  color: black;
+  color: $off-white;
   text-transform: uppercase;
   font-weight: 500;
   font-style: normal;
@@ -58,12 +58,12 @@
 .navbar-5crewed-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
-  border-color: #0C1E2F;
+  border-color: $madison;
 }
 .navbar-5crewed-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: #0C1E2F !important;
+  color: $madison !important;
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
@@ -79,12 +79,12 @@
   position: absolute;
   right: 10px;
   top: -6px;
-  background-color: white;
+  background-color: $off-white;
   transform: rotate(45deg);
-  border-left: 1px solid #0C1E2F;
-  border-top: 1px solid #0C1E2F;
+  border-left: 1px solid $madison;
+  border-top: 1px solid $madison;
 }
 
 #last {
-  border-top: 1px solid #0C1E2F;
+  border-top: 1px solid $madison;
 }

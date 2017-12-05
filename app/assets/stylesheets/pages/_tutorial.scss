@@ -2,11 +2,11 @@
 //   display: grid;
 //   grid-template-columns: 20px repeat(6, 1fr) 20px;
 //   grid-template-rows: 10px 150px 60px 100px 20px;
-//   background-color: #0c1e2f;
+//   background-color: $madison;
 // }
 //     // grid-row: 2 / span 5;
 //     // grid-column: 1 / span 8;
-//     // background-color: #0c1e2f;
+//     // background-color: $madison;
 //     // position: relative;
 //     // display: inline !important;
 //     // // // margin-top: auto;
@@ -66,7 +66,7 @@
 //   // width: 150px;
 //   // height: 150px;
 //   // left: 10px;
-//   // background: white;
+//   // background: $off-white;
 //   // z-index: 100;
 //   // border: 2px solid #747474;
 //   // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
@@ -91,7 +91,7 @@
 //     width: 45px;
 //     height: 45px;
 //         // background: $off-white;
-//         // color:  #0c1e2f;
+//         // color:  $madison;
 //         color: $off-white;
 //       }
 //     }
@@ -115,7 +115,7 @@
 //         width: 45px;
 //         height: 45px;
 //         // background: $off-white;
-//         // color: #0c1e2f;
+//         // color: $madison;
 //         color: $off-white;
 //       }
 //     }
@@ -136,7 +136,7 @@
 //         width: 45px;
 //         height: 45px;
 //         // background: $off-white;
-//         // color: #0c1e2f;
+//         // color: $madison;
 
 //       }
 //     }

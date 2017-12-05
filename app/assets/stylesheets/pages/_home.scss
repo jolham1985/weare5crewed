@@ -21,7 +21,7 @@
   height: 150px;
   top: 20px;
   left: 10px;
-  background: white;
+  background: $off-white;
   border-radius: 50%;
   z-index: 100;
   border: 1px solid #747474;
@@ -55,7 +55,7 @@
   position: relative;
   height: 14px;
   width: 175px;
-  color: #0c1e2f;
+  color: $madison;
   z-index: 100;
   text-align: center;
   justify-content: center;
@@ -74,7 +74,7 @@
   position: relative;
   margin-top: auto;
   margin-bottom: auto;
-  color: #0c1e2f;
+  color: $madison;
   z-index: 100;
   text-align: center;
   justify-content: center;
@@ -88,7 +88,7 @@
     margin-top: auto;
     margin-bottom: auto;
     font-size: 32px;
-    background: #77aed7;
+    background: $bdfrance;
 
   }
 }
@@ -97,8 +97,8 @@
 }
 
 .typewrite {
-  background: #77aed7;
-  color: #0c1e2f;
+  background: $bdfrance;
+  color: $madison;
   z-index: 100;
   text-align: center;
   justify-content: center;
@@ -131,7 +131,7 @@
   display: grid;
   grid-template-columns: 20px repeat(6, 1fr) 20px;
   grid-template-rows: 25px 50px 25px 140px 25px;
-  background-color: #0c1e2f;
+  background-color: $madison;
 }
 
 .icon1 {
@@ -143,7 +143,7 @@
   margin-right: auto;
   border-radius: 50%;
   background-color: $off-white;
-  color: #0c1e2f;
+  color: $madison;
   width: 100px;
   height: 100px;
   vertical-align: center;
@@ -162,7 +162,7 @@
   margin-right: auto;
   border-radius: 50%;
   background-color: $off-white;
-  color: #0c1e2f;
+  color: $madison;
   width: 100px;
   height: 100px;
   vertical-align: center;
@@ -181,7 +181,7 @@
   margin-right: auto;
   border-radius: 50%;
   background-color: $off-white;
-  color: #0c1e2f;
+  color: $madison;
   width: 100px;
   height: 100px;
   vertical-align: center;
@@ -335,7 +335,7 @@ footer {
 
 .modal-footer {
   text-align: center;
-  color: $md-blue;
+  color: $bdfrance;
   text-transform: uppercase;
   font-weight: 500;
   font-style: normal;
@@ -347,14 +347,14 @@ footer {
 .loader,
 .loader:before,
 .loader:after {
-  background: #77aed7;
+  background: $bdfrance;
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
   height: 4em;
 }
 .loader {
-  color: #77aed7;
+  color: $bdfrance;
   text-indent: -9999em;
   margin: 88px auto;
   position: relative;
