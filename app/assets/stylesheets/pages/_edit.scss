@@ -67,6 +67,21 @@
   grid-column: 3 / span 2;
 }
 
+.edit-form-2 p {
+  margin-left: 15px;
+  font-style: normal;
+}
+
+.Yes {
+  color: green;
+  font-weight: 700;
+}
+
+.No {
+  color: red;
+  font-weight: 700;
+}
+
 .edit-form-3 {
   grid-row: 4;
   grid-column: 3 / span 2;
