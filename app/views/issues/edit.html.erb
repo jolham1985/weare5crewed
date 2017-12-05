@@ -12,14 +12,12 @@
   <p class="edit-sub-title">Address: <%= current_user.rented_apartments.first.address %></p>
 </div>
   <div class="edit-form-2">
-    <p class="edit-sub-title">Question Log</p>
-    <ul>
+    <h5 class="edit-sub-title">Question Log</h5>
       <% @issue.questionnaire.each do |question| %>
-      <li>
-        <%= question %>
-      </li>
+        <% q1 = question.slice(/(?<q>.*)(?<a>(Yes|No))\z/, "q") %>
+        <% q2 = question.slice(/(?<q>.*)(?<a>(Yes|No))\z/, "a") %>
+        <p> <%= q1 %> <span class=<%= q2 %>><%= q2 %></span> </p>
       <% end %>
-    </ul>
   </div>
   <div class="edit-form-3">
     <%= simple_form_for([current_user, @issue]) do |f| %>
@@ -30,5 +28,3 @@
   </div>
   <% end %>
 </div>
-
-
