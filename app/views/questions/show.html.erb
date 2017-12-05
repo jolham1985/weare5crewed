@@ -8,15 +8,24 @@
       <%= @question.content %>
     </div>
     <div class="btn-tb question-btn">
+      <div class="btn-text-grp">
       <%= link_to user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "true"), class: "positive" do %>
       <i class="fa fa-check" id="check"></i>
       <% end %>
+      <p>Yes</p>
+      </div>
+      <div class="btn-text-grp">
       <%= link_to user_issue_question_path(current_user.id, params[:issue_id], @question.id, query: "false"), class: "negative" do %>
       <i class="fa fa-times" id="times"></i>
       <% end %>
+      <p>No</p>
+      </div>
+      <div class="btn-text-grp">
       <%= link_to "#", data: {toggle: "modal", target: "#successModal"}, class: "form" do %>
       <i class="fa fa-star" aria-hidden="true"></i>
       <% end %>
+      <p>Works!</p>
+      </div>
     </div>
   </div>
   </div>

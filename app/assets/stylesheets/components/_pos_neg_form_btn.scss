@@ -105,3 +105,21 @@
 #success {
   color: black;
 }
+
+.btn-text-grp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-text-grp p {
+  margin-top: 12.5px;
+  margin-bottom: 0;
+  color: $deep-blue;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 12px;
+}
